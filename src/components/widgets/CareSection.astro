@@ -1,0 +1,84 @@
+---
+// Assuming the section data is passed or imported correctly
+const section = [
+  {
+    "section": {
+      "title": "ผ่าตัดกับ Envyz me care",
+      "subtitle": "ไม่ยุ่งยาก ไม่น่ากลัวอย่างที่คิด",
+      "features": [
+        {
+          "link": "https://example.com/surgery-popular",
+          "image": {
+            "src": "https://static.hd.co.th/750x450/system/image_attachments/images/000/255/934/original/Surgery_Icon_i1.png",
+            "alt": "ผ่าตัดที่คนสนใจมาก"
+          },
+          "text": "ผ่าตัดที่คนสนใจมาก"
+        },
+        {
+          "link": "https://example.com/abdominal",
+          "image": {
+            "src": "https://static.hd.co.th/750x450/system/image_attachments/images/000/255/935/original/Surgery_Icon_i2.png",
+            "alt": "ช่องท้องและทางเดินอาหาร"
+          },
+          "text": "ช่องท้องและทางเดินอาหาร"
+        },
+        {
+          "link": "https://example.com/skin-bone-joints",
+          "image": {
+            "src": "https://static.hd.co.th/750x450/system/image_attachments/images/000/255/936/original/Surgery_Icon_i3.png",
+            "alt": "ผิว กระดูก และข้อ"
+          },
+          "text": "ผิว กระดูก และข้อ"
+        },
+        {
+          "link": "https://example.com/womens-health",
+          "image": {
+            "src": "https://static.hd.co.th/750x450/system/image_attachments/images/000/255/937/original/Surgery_Icon_i4.png",
+            "alt": "สุขภาพผู้หญิง"
+          },
+          "text": "สุขภาพผู้หญิง"
+        },
+        {
+          "link": "https://example.com/mens-health",
+          "image": {
+            "src": "https://static.hd.co.th/750x450/system/image_attachments/images/000/255/938/original/Surgery_Icon_i5.png",
+            "alt": "สุขภาพผู้ชาย"
+          },
+          "text": "สุขภาพผู้ชาย"
+        },
+        {
+          "link": "https://example.com/ent-health",
+          "image": {
+            "src": "https://static.hd.co.th/750x450/system/image_attachments/images/000/255/939/original/Surgery_Icon_i6.png",
+            "alt": "หู คอ จมูก"
+          },
+          "text": "หู คอ จมูก"
+        },
+        {
+          "link": "https://example.com/other-procedures",
+          "image": {
+            "src": "https://static.hd.co.th/750x450/system/image_attachments/images/000/255/940/original/Surgery_Icon_i7.png",
+            "alt": "หัตถการอื่นๆ"
+          },
+          "text": "หัตถการอื่นๆ"
+        }
+      ]
+    }
+  }
+]
+---
+
+<section class="care-section p-4 bg-gray-100">
+  <h2 class="text-xl font-semibold text-center">{section[0].section.title}</h2>
+  <p class="text-lg text-gray-600 text-center">{section[0].section.subtitle}</p>
+  <div class="hdcare-features grid grid-cols-5 sm:grid-cols-3 md:grid-cols-7 gap-4 mt-4">
+      {section[0].section.features.map((feature) => (
+          <a href={feature.link} class="hdcare-feature flex flex-col items-center p-2">
+              <img src={feature.image.src} alt={feature.image.alt} class="w-24 h-24 object-cover mb-2"/>
+              <p class="text-center text-sm font-medium">{feature.text}</p>
+          </a>
+      ))}
+  </div>
+</section>
+
+

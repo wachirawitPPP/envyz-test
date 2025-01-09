@@ -1,0 +1,75 @@
+---
+import Detail from '~/components/widgets/Detail.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+
+// export interface Props {
+//   locale: string;
+// }
+
+// const { locale } = Astro.props;
+
+const metadata = {
+  title: 'Envyz Me  — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+// const product = {
+//   id: 8,
+//   imgSrc:
+//     'https://image.makewebcdn.com/makeweb/m_1920x0/gR8C8Iimd/DefaultData/358691738_668603541975095_3511059683635981845_n.jpg',
+//   title: 'กายภาพบำบัด',
+//   price: '900',
+//   oldPrice: '1,200',
+//   rating: '★★★★☆',
+//   link: '#',
+//   description:
+//     'บริการกายภาพบำบัดที่ออกแบบมาเพื่อฟื้นฟูร่างกาย ช่วยลดอาการปวด และเสริมสร้างความแข็งแรงของกล้ามเนื้อและข้อต่อ.',
+//   category: 'Health & Wellness',
+//   benefits: [
+//     'ลดอาการปวดกล้ามเนื้อและข้อ',
+//     'ฟื้นฟูการเคลื่อนไหวของร่างกาย',
+//     'เสริมสร้างกล้ามเนื้อให้แข็งแรง',
+//     'เหมาะสำหรับผู้ป่วยหลังการผ่าตัด',
+//   ],
+//   duration: '60 นาที',
+//   requirements: 'กรุณานัดหมายล่วงหน้าอย่างน้อย 1 วัน.',
+//   availableTimes: ['จันทร์-ศุกร์: 09:00 - 18:00', 'เสาร์: 10:00 - 16:00', 'อาทิตย์: ปิดทำการ'],
+//   reviews: [
+//     {
+//       reviewer: 'คุณสมชาย',
+//       comment: 'บริการดีมากครับ อาการปวดลดลงทันทีหลังจากทำกายภาพครั้งแรก',
+//       rating: '★★★★★',
+//     },
+//     {
+//       reviewer: 'คุณวิภา',
+//       comment: 'พนักงานมีความเป็นมืออาชีพ และให้คำแนะนำที่ดี',
+//       rating: '★★★★☆',
+//     },
+//   ],
+//   location: {
+//     address: '123/45 ซอยสุขภาพดี ถนนสุขภาพ เขตสุขภาพ กรุงเทพมหานคร 10110',
+//     mapLink: 'https://goo.gl/maps/example',
+//   },
+//   contact: {
+//     phone: '02-123-4567',
+//     email: 'contact@example.com',
+//   },
+// };
+
+// export function getStaticPaths() {
+//   return [
+//     { params: { locale: "en" } },
+//     { params: { locale: "fr" } },
+//     { params: { locale: "th" } },
+//     { params: { locale: "la" } },
+//   ];
+// }
+const { locale, productId } = Astro.params;
+
+// const id = Astro.url.searchParams.get('id');
+// console.log(id)
+---
+
+<PageLayout locale={locale} metadata={metadata}>
+<Detail locale={locale} productId={productId}/>
+</PageLayout
+>

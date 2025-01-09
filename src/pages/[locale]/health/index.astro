@@ -1,0 +1,121 @@
+---
+import Header from "~/components/widgets/Header.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
+import { getTranslations, t } from "../../../i18n";
+import Advertise2 from "~/components/widgets/Advertise2.astro";
+import ProductList from "~/components/widgets/ProductList.jsx";
+const { locale } = Astro.params;
+import CustomerServices from "~/components/widgets/CustomerServices.astro";
+console.log(Astro.url.pathname)
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+
+
+const data = [
+  {
+    id:1,
+    imgSrc: 'https://pribta-tangerine.com/wp-content/uploads/2024/08/Pro1500.png',
+    title: 'ตรวจโรคติดต่อทางเพศสัมพันธ์',
+    price: '2,820',
+    oldPrice: '3,200',
+    rating: '★★★★★',
+    link: '#',
+  },
+  {
+    id:2,
+    imgSrc:
+      'https://mersiclinic-thailand.com/wp-content/uploads/2024/07/%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99-Q-Switch.jpg',
+    title: 'โปร CO2 Laser',
+    price: '2,199',
+    oldPrice: '2,500',
+    rating: '★★★★☆',
+    link: '#',
+  },
+  {
+    id:3,
+    imgSrc:
+      'https://image.makewebcdn.com/makeweb/m_1920x0/gR8C8Iimd/DefaultData/358691738_668603541975095_3511059683635981845_n.jpg',
+    title: 'กายภาพบำบัด',
+    price: '900',
+    oldPrice: '1,200',
+    rating: '★★★★☆',
+    link: '#',
+  },
+  {
+    id:4,
+    imgSrc: 'https://api.ruamjairak.com/media/2023/12/27/_eqqr1zO3QfJGlcCOE6jK6HfKR8sxx.jpg',
+    title: 'ตรวจสุขภาพหัวใจ',
+    price: '1,999',
+    oldPrice: '2,500',
+    rating: '★★★★★',
+    link: '#',
+  },
+  {
+    id:5,
+    imgSrc: 'https://pribta-tangerine.com/wp-content/uploads/2024/08/Pro1500.png',
+    title: 'ตรวจโรคติดต่อทางเพศสัมพันธ์',
+    price: '2,820',
+    oldPrice: '3,200',
+    rating: '★★★★★',
+    link: '#',
+  },
+  {
+    id:6,
+    imgSrc:
+      'https://mersiclinic-thailand.com/wp-content/uploads/2024/07/%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99-Q-Switch.jpg',
+    title: 'โปร CO2 Laser',
+    price: '2,199',
+    oldPrice: '2,500',
+    rating: '★★★★☆',
+    link: '#',
+  },
+  {
+    id:10,
+    imgSrc:
+      'https://image.makewebcdn.com/makeweb/m_1920x0/gR8C8Iimd/DefaultData/358691738_668603541975095_3511059683635981845_n.jpg',
+    title: 'กายภาพบำบัด',
+    price: '900',
+    oldPrice: '1,200',
+    rating: '★★★★☆',
+    link: '#',
+  },
+  {
+    id:7,
+    imgSrc: 'https://api.ruamjairak.com/media/2023/12/27/_eqqr1zO3QfJGlcCOE6jK6HfKR8sxx.jpg',
+    title: 'ตรวจสุขภาพหัวใจ',
+    price: '1,999',
+    oldPrice: '2,500',
+    rating: '★★★★★',
+    link: '#',
+  },
+  {
+    id:8,
+    imgSrc:
+      'https://image.makewebcdn.com/makeweb/m_1920x0/gR8C8Iimd/DefaultData/358691738_668603541975095_3511059683635981845_n.jpg',
+    title: 'กายภาพบำบัด',
+    price: '900',
+    oldPrice: '1,200',
+    rating: '★★★★☆',
+    link: '#',
+  },
+  {
+    id:9,
+    imgSrc: 'https://api.ruamjairak.com/media/2023/12/27/_eqqr1zO3QfJGlcCOE6jK6HfKR8sxx.jpg',
+    title: 'ตรวจสุขภาพหัวใจ',
+    price: '1,999',
+    oldPrice: '2,500',
+    rating: '★★★★★',
+    link: '#',
+  },
+];
+---
+<PageLayout  metadata={metadata} locale={locale}>
+  
+  <Advertise2/>
+  <CustomerServices/>
+    <ProductList header="สุขภาพ" subHeader='' locale={locale}  client:load data={data} >
+  
+</PageLayout>
+

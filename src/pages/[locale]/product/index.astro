@@ -1,0 +1,27 @@
+---
+// import Header from "~/components/widgets/Header.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
+// import { getTranslations, t } from "../../../i18n";
+const { locale } = Astro.params;
+console.log(Astro.url.pathname)
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: "en" } },
+    { params: { locale: "fr" } },
+    { params: { locale: "th" } },
+    { params: { locale: "la" } },
+  ];
+}
+const id = Astro.url.searchParams.get('id');
+console.log(id)
+---
+<PageLayout  metadata={metadata} locale={locale}>
+  <div class="h-dvh">{id}
+  </div>
+</PageLayout>
+

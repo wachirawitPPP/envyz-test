@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+// import Announcement from '~/components/widgets/Announcement.astro';
+
+import { headerData, footerData } from '~/navigation';
+
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+  locale?: any;
+  showFooter?: boolean;
+}
+
+const { metadata, locale, showFooter=true } = Astro.props;
+console.log(locale)
+---
+
+<Layout metadata={metadata} locale={locale}>
+  <!-- <slot name="announcement">
+    <HeaderAnnounce client:load/>
+  </slot> -->
+  <slot name="header">
+    <Header position="right" {...headerData} locale={locale} isSticky showRssFeed showToggleTheme />
+  </slot>
+  <main>
+    <slot />
+  </main>
+  {
+    showFooter && (
+      <slot name="footer">
+        <Footer {...footerData} />
+      </slot>
+    )
+  }
+</Layout>

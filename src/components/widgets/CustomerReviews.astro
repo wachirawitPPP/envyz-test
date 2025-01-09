@@ -1,0 +1,37 @@
+---
+const reviews = [
+  {
+    "name": "คุณมะลิ พ.",
+    "image": "https://i.pinimg.com/736x/e0/d6/70/e0d670d16bbad299ec0fd467c031fe7e.jpg",
+    "review": "บริการดีมากค่ะ คุณหมอให้คำแนะนำอย่างละเอียด พนักงานก็เป็นกันเอง ราคาก็เหมาะสมมาก",
+    "rating": 5
+  },
+  {
+    "name": "คุณสมชาย ก.",
+    "image": "https://i.pinimg.com/736x/91/24/74/9124747c62bcc94451d40bb08708aaf6.jpg",
+    "review": "ซื้อคอร์สดูแลผิวผ่านเว็บไซต์นี้ ได้ผลลัพธ์ดีเกินคาดค่ะ ราคาก็ถูกกว่าในคลินิกทั่วไป",
+    "rating": 5
+  },
+  {
+    "name": "คุณวรรณา ว.",
+    "image": "https://i.pinimg.com/736x/55/5e/c5/555ec520b022cb78b02597bf08c420bb.jpg",
+    "review": "โปรโมชั่นเยอะมากและราคาถูกกว่าเคยเจอ ประทับใจตั้งแต่ใช้ครั้งแรกเลยค่ะ",
+    "rating": 5
+  }
+];
+---
+<div class="review-section py-6 bg-white">
+  <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">เสียงตอบรับจากลูกค้าของเรา</h2>
+  <div class="reviews grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-4 px-20">
+    {reviews.map((review) => (
+      <div class="review-card bg-white shadow-md rounded-lg p-4 max-w-[180px] mx-auto flex flex-col items-start">
+        <img src={review.image} alt={`Customer ${review.name}`} class="w-14 h-14 rounded-full mb-2" />
+        <h3 class="text-xs font-semibold text-left text-gray-800">{review.name}</h3>
+        <p class="text-gray-600 text-xs text-left mt-1">{review.review}</p>
+        <div class="rating text-yellow-400 text-left mt-2 text-xs">
+          {'★'.repeat(review.rating)}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

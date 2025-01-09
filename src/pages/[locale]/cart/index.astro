@@ -1,0 +1,162 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+const { locale } = Astro.params;
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<PageLayout metadata={metadata} locale={locale}>
+  <div class="bg-white rounded-lg shadow p-8 sm:p-6 max-w-full dark:bg-gray-700 mx-11 mt-6 mb-6">
+    <div class="relative overflow-x-auto">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead class="font-nolmal border-b dark:bg-gray-700">
+            <tr>
+              <th class="text-center" scope="col" class="p-8">
+                <div class="items-center">
+                  <input
+                    id="checkbox-all"
+                    type="checkbox"
+                    class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 accent-pink-500 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label for="checkbox-all" class="sr-only">checkbox</label>
+                </div>
+              </th>
+              <th scope="col" class="px-6 py-3 text-start"> <span class="text-lg font-nolmal text-[#4A4A4A]">Product</span> </th>
+              <th scope="col" class="px-6 py-3 text-end"> <span class="text-lg font-nolmal text-[#4A4A4A]">Quantity</span> </th>
+              <th scope="col" class="px-6 py-3 text-end"> <span class="text-lg font-nolmal text-[#4A4A4A]">Unit Price</span> </th>
+              <th scope="col" class="px-6 py-3 text-end"> <span class="text-lg font-nolmal text-[#4A4A4A]">Total Price</span> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <td class="w-4 p-8">
+                <div class="flex items-center">
+                  <input
+                    id="checkbox-1"
+                    type="checkbox"
+                    class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 accent-pink-500 rounded focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label for="checkbox-1" class="sr-only">checkbox</label>
+                </div>
+              </td>
+              <th scope="row" class="px-6 py-5 text-gray-900 dark:text-white">
+                <div class="flex flex-col items-start">
+                  <span class="mt-1 font-normal font-sans text-sm">ยกกระชับด้วย HIFU ทั่วใบหน้า</span>
+                  <span class="mt-1 font-normal font-sans text-sm text-gray-500 dark:text-gray-400">APS Clinic</span>
+                  <button
+                    class="mt-1 text-teal-500 hover:text-teal-600 focus:outline-none"
+                    aria-label="Delete"
+                  >
+                  <svg width="20" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2H9.5V1.5C9.5 1.10218 9.34196 0.720644 9.06066 0.43934C8.77936 0.158035 8.39782 0 8 0H5C4.60218 0 4.22064 0.158035 3.93934 0.43934C3.65804 0.720644 3.5 1.10218 3.5 1.5V2H1C0.867392 2 0.740215 2.05268 0.646447 2.14645C0.552679 2.24021 0.5 2.36739 0.5 2.5C0.5 2.63261 0.552679 2.75979 0.646447 2.85355C0.740215 2.94732 0.867392 3 1 3H1.5V12C1.5 12.2652 1.60536 12.5196 1.79289 12.7071C1.98043 12.8946 2.23478 13 2.5 13H10.5C10.7652 13 11.0196 12.8946 11.2071 12.7071C11.3946 12.5196 11.5 12.2652 11.5 12V3H12C12.1326 3 12.2598 2.94732 12.3536 2.85355C12.4473 2.75979 12.5 2.63261 12.5 2.5C12.5 2.36739 12.4473 2.24021 12.3536 2.14645C12.2598 2.05268 12.1326 2 12 2ZM4.5 1.5C4.5 1.36739 4.55268 1.24021 4.64645 1.14645C4.74021 1.05268 4.86739 1 5 1H8C8.13261 1 8.25979 1.05268 8.35355 1.14645C8.44732 1.24021 8.5 1.36739 8.5 1.5V2H4.5V1.5ZM10.5 12H2.5V3H10.5V12ZM5.5 5.5V9.5C5.5 9.63261 5.44732 9.75979 5.35355 9.85355C5.25979 9.94732 5.13261 10 5 10C4.86739 10 4.74021 9.94732 4.64645 9.85355C4.55268 9.75979 4.5 9.63261 4.5 9.5V5.5C4.5 5.36739 4.55268 5.24021 4.64645 5.14645C4.74021 5.05268 4.86739 5 5 5C5.13261 5 5.25979 5.05268 5.35355 5.14645C5.44732 5.24021 5.5 5.36739 5.5 5.5ZM8.5 5.5V9.5C8.5 9.63261 8.44732 9.75979 8.35355 9.85355C8.25979 9.94732 8.13261 10 8 10C7.86739 10 7.74021 9.94732 7.64645 9.85355C7.55268 9.75979 7.5 9.63261 7.5 9.5V5.5C7.5 5.36739 7.55268 5.24021 7.64645 5.14645C7.74021 5.05268 7.86739 5 8 5C8.13261 5 8.25979 5.05268 8.35355 5.14645C8.44732 5.24021 8.5 5.36739 8.5 5.5Z" fill="#00AD98"/>
+                    </svg>
+                  </button>
+                </div>
+              </th>
+              
+              <td class="px-6 py-4 flex justify-end text-end ">
+                <div class="flex items-center custom-number-input h-10 w-32 rounded-l-full">
+                  <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-9 border-collapse border-[1px]">
+                    <button data-action="decrement" class="bg-white text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-24 rounded-l-lg cursor-pointer outline-none border-r-[1px]">
+                      <span class="m-auto text-xl font-serif">−</span>
+                    </button>
+                    <input type="number" class="text-center w-10 bg-white font-serif hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none" name="custom-input-number" value="0"></input>
+                  <button data-action="increment" class="bg-white text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-24 rounded-r-lg cursor-pointer border-l-[1px]">
+                    <span class="m-auto text-xl font-serif">+</span>
+                  </button>
+                </div>
+              </td>
+              <td class="px-6 py-4 text-end"> <span><del>฿3,700</del></span><span class="text-[#00AD98]">฿3,500</span> </td>
+              <td class="px-6 py-4 text-end"> ฿3,500 </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bg-white border border-gray-200 rounded-lg p-6 mt-4">
+          <h2 class="font-nolmal text-[#4A4A4A] text-sm mb-2">Order Summary</h2>
+          <div class="flex justify-between items-center text-sm text-[#4A4A4A] mb-2">
+            <span class="font-normal font-sans text-sm">Full Price</span>
+            <span class="font-medium">฿7,000</span>
+          </div>
+          <div class="flex justify-between items-center text-sm text-[#4A4A4A] mb-2">
+            <span class="font-normal font-sans text-sm">Discount</span>
+            <span class="text-teal-500 font-medium">-฿3,800</span>
+          </div>
+          <div class="flex justify-between items-center text-sm text-[#4A4A4A] mb-2">
+            <span class="font-normal font-sans text-sm">Total</span>
+            <span class="font-medium">฿3,200</span>
+          </div>
+        </div>
+        <div class="flex justify-end space-x-4 mt-4 mb-20">
+          <button
+            class="px-4 py-2 font-normal text-sm font-sans text-white bg-gray-700 hover:bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500"
+          >
+            Previous
+          </button>
+          <button
+            class="px-4 py-2 font-normal text-sm font-sans text-white bg-teal-500 hover:bg-teal-600 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-400"
+          >
+            Next
+          </button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</PageLayout>
+<style>
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .custom-number-input input:focus {
+    outline: none !important;
+  }
+
+  .custom-number-input button:focus {
+    outline: none !important;
+  }
+</style>
+<script>
+  function decrement(e) {
+    const btn = e.target.parentNode.parentElement.querySelector(
+      'button[data-action="decrement"]'
+    );
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    if (value > 1) { // ตรวจสอบว่าค่ามากกว่า 1 ก่อนลด
+      value--;
+      target.value = value;
+    }
+  }
+
+  function increment(e) {
+    const btn = e.target.parentNode.parentElement.querySelector(
+      'button[data-action="decrement"]'
+    );
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    value++;
+    target.value = value;
+  }
+
+  const decrementButtons = document.querySelectorAll(
+    `button[data-action="decrement"]`
+  );
+
+  const incrementButtons = document.querySelectorAll(
+    `button[data-action="increment"]`
+  );
+
+  decrementButtons.forEach(btn => {
+    btn.addEventListener("click", decrement);
+  });
+
+  incrementButtons.forEach(btn => {
+    btn.addEventListener("click", increment);
+  });
+</script>

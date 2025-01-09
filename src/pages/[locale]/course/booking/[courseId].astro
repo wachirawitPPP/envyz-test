@@ -1,0 +1,29 @@
+---
+// import Detail from '~/components/widgets/Detail.astro';
+import CourseBooking from '~/components/widgets/CourseBooking';
+import PageLayout from '~/layouts/PageLayout.astro';
+
+// export interface Props {
+//   locale: string;
+// }
+
+// const { locale } = Astro.props;
+
+const metadata = {
+  title: 'Envyz Me  — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+
+const { locale, courseId } = Astro.params;
+
+// const id = Astro.url.searchParams.get('id');
+// console.log(id)
+---
+
+<PageLayout locale={locale} metadata={metadata}>
+    
+<CourseBooking  courseId={courseId}  client:load/>
+
+<!-- <Detail/> -->
+</PageLayout
+>

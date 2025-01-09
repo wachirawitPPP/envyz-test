@@ -1,0 +1,279 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+const { locale } = Astro.params;
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<PageLayout metadata={metadata} locale={locale}>
+  <div class="bg-white rounded-lg shadow p-8 sm:p-6 max-w-full dark:bg-gray-700 mx-11 mt-6 mb-6">
+    <div class="relative overflow-x-auto">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <ol class="flex justify-center items-center w-full text-xs text-white font-medium sm:text-base px-6 mb-5">
+          <li
+            class="flex w-full relative text-teal-600 after:content-[''] after:w-full after:h-0.5 after:bg-teal-600 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4"
+          >
+            <div class="block whitespace-nowrap z-10">
+              <span
+                class="w-6 h-6 bg-teal-600 border-2 border-transparent rounded-full flex justify-center items-center mx-auto mb-2 text-sm text-white lg:w-10 lg:h-10"
+                >1</span
+              >
+              <span class="text-sm text-[#4A4A4A]">Cart</span>
+            </div>
+          </li>
+          <li
+            class="flex w-full relative text-gray-500 after:content-[''] after:w-full after:h-0.5 after:bg-gray-200 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4"
+          >
+            <div class="block whitespace-nowrap z-10">
+              <span
+                class="w-6 h-6 bg-[#4A4A4A] border-2 border-[#4A4A4A] rounded-full flex justify-center items-center mx-auto mb-2 text-sm text-white lg:w-10 lg:h-10"
+                >2</span
+              >
+              <span class="text-sm text-[#4A4A4A]">Your Details & payment</span>
+            </div>
+          </li>
+          <li
+            class="flex relative text-gray-500 after:content after:h-0.5 after:bg-gray-200 after:inline-block after:absolute lg:after:top-5 after:left-5"
+          >
+            <div class="block whitespace-nowrap z-10">
+              <span
+                class="w-6 h-6 bg-[#4A4A4A] border-2 border-[#4A4A4A] rounded-full flex justify-center items-center mx-auto mb-2 text-sm text-white lg:w-10 lg:h-10"
+                >3</span
+              >
+              <span class="text-sm text-[#4A4A4A]">Order completed</span>
+            </div>
+          </li>
+        </ol>
+        <div class="mb-6 mt-10">
+          <h2 class="text-lg text-gray-900 px-6">Your Details</h2>
+        </div>
+        <!-- Form -->
+        <form>
+          <div class="grid grid-cols-1 gap-4 mb-7 border-t-2 px-6">
+            <!-- Name -->
+            <div class="flex items-center space-x-4 mt-5">
+              <label class="text-gray-700 text-sm font-medium w-20" for="name-input"> Name </label>
+              <div
+                class="flex items-center border border-gray-300 rounded-lg w-full p-2 focus-within:ring-2 focus-within:ring-teal-500"
+              >
+                <span class="text-gray-500 px-2">
+                  <svg
+                    class="h-5 w-5"
+                    width="15"
+                    height="20"
+                    viewBox="0 0 15 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 19V17C1.5 15.9391 1.92143 14.9217 2.67157 14.1716C3.42172 13.4214 4.43913 13 5.5 13H9.5C10.5609 13 11.5783 13.4214 12.3284 14.1716C13.0786 14.9217 13.5 15.9391 13.5 17V19M3.5 5C3.5 6.06087 3.92143 7.07828 4.67157 7.82843C5.42172 8.57857 6.43913 9 7.5 9C8.56087 9 9.57828 8.57857 10.3284 7.82843C11.0786 7.07828 11.5 6.06087 11.5 5C11.5 3.93913 11.0786 2.92172 10.3284 2.17157C9.57828 1.42143 8.56087 1 7.5 1C6.43913 1 5.42172 1.42143 4.67157 2.17157C3.92143 2.92172 3.5 3.93913 3.5 5Z"
+                      stroke="#111C2D"
+                      stroke-opacity="0.8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <input
+                  id="name-input"
+                  type="text"
+                  placeholder="Fuji kaze"
+                  class="w-full outline-none text-gray-700 placeholder-gray-400"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center space-x-4">
+              <label class="text-gray-700 text-sm font-medium w-20" for="name-input"> Email </label>
+              <div
+                class="flex items-center border border-gray-300 rounded-lg w-full p-2 focus-within:ring-2 focus-within:ring-teal-500"
+              >
+                <span class="text-gray-500 px-2">
+                  <svg
+                    class="h-5 w-5"
+                    width="21"
+                    height="16"
+                    viewBox="0 0 21 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 3C1.5 2.46957 1.71071 1.96086 2.08579 1.58579C2.46086 1.21071 2.96957 1 3.5 1H17.5C18.0304 1 18.5391 1.21071 18.9142 1.58579C19.2893 1.96086 19.5 2.46957 19.5 3V13C19.5 13.5304 19.2893 14.0391 18.9142 14.4142C18.5391 14.7893 18.0304 15 17.5 15H3.5C2.96957 15 2.46086 14.7893 2.08579 14.4142C1.71071 14.0391 1.5 13.5304 1.5 13V3Z"
+                      stroke="#111C2D"
+                      stroke-opacity="0.8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M1.5 3L10.5 9L19.5 3"
+                      stroke="#111C2D"
+                      stroke-opacity="0.8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <input
+                  id="name-input"
+                  type="text"
+                  placeholder="Fujiikaze@gmail.com"
+                  class="w-full outline-none text-gray-700 placeholder-gray-400"
+                />
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center space-x-4">
+              <label class="text-gray-700 text-sm font-medium w-20" for="name-input"> Phone No </label>
+              <div
+                class="flex items-center border border-gray-300 rounded-lg w-full p-2 focus-within:ring-2 focus-within:ring-teal-500"
+              >
+                <span class="text-gray-500 px-2">
+                  <svg
+                    class="h-5 w-5"
+                    width="20"
+                    height="19"
+                    viewBox="0 0 20 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 1H7.5L9.5 6L7 7.5C8.07096 9.67153 9.82847 11.429 12 12.5L13.5 10L18.5 12V16C18.5 16.5304 18.2893 17.0391 17.9142 17.4142C17.5391 17.7893 17.0304 18 16.5 18C12.5993 17.763 8.92015 16.1065 6.15683 13.3432C3.3935 10.5798 1.73705 6.90074 1.5 3C1.5 2.46957 1.71071 1.96086 2.08579 1.58579C2.46086 1.21071 2.96957 1 3.5 1Z"
+                      stroke="#111C2D"
+                      stroke-opacity="0.8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <input
+                  id="name-input"
+                  type="text"
+                  placeholder="412 2150 451"
+                  class="w-full outline-none text-gray-700 placeholder-gray-400"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Payment Method -->
+          <div class="mb-6 mt-4">
+            <h2 class="text-lg text-gray-900 px-6">Select a payment method</h2>
+            <hr class="border-[1px] border-[gray-300] my-4" />
+            <div class="space-y-2 px-6">
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+                />
+                <span>Installment Plan</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+                />
+                <span>PromptPay</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+                />
+                <span>Creditcard / Debitcard</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+                />
+                <span>Internet Banking</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+                />
+                <span>PayPal</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+                />
+                <span>True money wallet</span>
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="flex justify-end space-x-4 mt-4 mb-5">
+          <button
+            class="px-4 py-2 font-normal text-sm font-sans text-white bg-gray-700 hover:bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500"
+          >
+            Previous
+          </button>
+          <button
+            class="px-4 py-2 font-normal text-sm font-sans text-white bg-teal-500 hover:bg-teal-600 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-400"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</PageLayout>
+<style>
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .custom-number-input input:focus {
+    outline: none !important;
+  }
+
+  .custom-number-input button:focus {
+    outline: none !important;
+  }
+</style>
+<script>
+  function decrement(e) {
+    const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    if (value > 1) {
+      // ตรวจสอบว่าค่ามากกว่า 1 ก่อนลด
+      value--;
+      target.value = value;
+    }
+  }
+
+  function increment(e) {
+    const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    value++;
+    target.value = value;
+  }
+
+  const decrementButtons = document.querySelectorAll(`button[data-action="decrement"]`);
+
+  const incrementButtons = document.querySelectorAll(`button[data-action="increment"]`);
+
+  decrementButtons.forEach((btn) => {
+    btn.addEventListener('click', decrement);
+  });
+
+  incrementButtons.forEach((btn) => {
+    btn.addEventListener('click', increment);
+  });
+</script>

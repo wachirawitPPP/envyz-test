@@ -1,0 +1,106 @@
+<body class="flex flex-row items-center justify-center bg-transparent">
+  <div class="">
+    <div class="flex m-10 w-12/12 lg:w-12/12">
+      <div class="flex items-center -mr-5 z-10">
+        <button
+          id="prevBtn"
+          class="transform h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-10 bg-gray-300 bg-opacity-30 border-2 border-gray-300 text-gray-300 rounded-md p-2 hover:bg-gray-500 hover:bg-opacity-50 hover:text-white hover:border-gray-600 shadow-md"
+        >
+          &#10094;
+        </button>
+      </div>
+      <div class="flex justify-center flex-grow">
+        <div
+          id="sliderContainer"
+          class="flex overflow-hidden transition-transform duration-700 ease-in-out justify-center items-center relative"
+        >
+          <!-- Images -->
+          <div class="flex justify-center items-center">
+            <img
+              class=" mx-auto w-full max-h-[250px]"
+              src="https://www.gangnamclinicth.net/wp-content/uploads/2024/07/3.png"
+              alt="Image 1"
+            />
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              class="mx-auto w-full max-h-[250px]"
+              src="https://www.gangnamclinicth.net/wp-content/uploads/2024/07/31.png"
+              alt="Image 2"
+            />
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              class=" mx-auto w-full max-h-[250px]"
+              src="https://www.gangnamclinicth.net/wp-content/uploads/2022/10/gangnamclinic-jacksonwang.jpg"
+              alt="Image 3"
+            />
+          </div>
+        </div>
+        <div class="flex items-center -ml-5 z-10">
+          <button
+            id="nextBtn"
+            class="transform h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-10 bg-gray-300 bg-opacity-30 border-2 border-gray-300 text-gray-300 rounded-md p-2 hover:bg-gray-500 hover:bg-opacity-50 hover:text-white hover:border-gray-600 shadow-md"
+          >
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sliderContainer = document.getElementById('sliderContainer');
+    const slides = Array.from(sliderContainer.children); // Get all slides
+    let currentIndex = 0; // Start from the first slide
+
+    // Function to update slider position
+    function updateSliderPosition() {
+      slides.forEach((slide, index) => {
+        slide.style.display = index === currentIndex ? 'flex' : 'none'; // Show current slide, hide others
+      });
+    }
+
+    // Move to the next slide
+    function goToNext() {
+      currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide after the last one
+      updateSliderPosition();
+    }
+
+    // Move to the previous slide
+    function goToPrev() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to the last slide before the first one
+      updateSliderPosition();
+    }
+
+    // Set interval to automatically move to the next slide every 3 seconds
+    setInterval(goToNext, 3000); // Change slide every 3 seconds
+
+    // Event listeners for next and previous buttons
+    document.getElementById('nextBtn').addEventListener('click', goToNext);
+    document.getElementById('prevBtn').addEventListener('click', goToPrev);
+
+    // Initialize the slider by showing the first slide
+    updateSliderPosition();
+  </script>
+
+  <style>
+    /* Adjust height for smaller screens */
+    @media (max-width: 768px) {
+      #sliderContainer img {
+        height: 200px; /* Reduce height for smaller screens */
+      }
+    }
+
+    /* Ensure sliderContainer is displayed correctly */
+    #sliderContainer {
+      display: flex;
+      width: 100%;
+    }
+
+    /* Images within the slider should take full width */
+    #sliderContainer > div {
+      flex: 0 0 100%;
+    }
+  </style>
+</body>

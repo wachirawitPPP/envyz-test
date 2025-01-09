@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md py-4">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-2xl font-bold text-[var(--color-turquoise)]">Product Page</h1>
+      <nav>
+        <ul class="flex gap-6">
+          <li><a href="#" class="text-gray-700 hover:text-[var(--color-turquoise)]">Home</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-[var(--color-turquoise)]">Shop</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-[var(--color-turquoise)]">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Product Section -->
+  <main class="container mx-auto p-6">
+    <div class="flex flex-col lg:flex-row gap-8 bg-white shadow-lg rounded-lg p-6">
+      <!-- Product Images -->
+      <div class="flex-1">
+<img id="mainImage" src="https://static.hdmall.co.th/1056x1056/webp/system/brands/general_brand_images/5435/original/IMG_1747_mix_resize.jpg" 
+     alt="Main Product" class="w-full rounded-lg object-cover h-96">
+
+             <div class="flex gap-2 mt-4 overflow-x-auto">
+              <a href="https://static.hdmall.co.th/1056x1056/webp/system/image_attachments/images/000/246/126/original/bo-new-gen-program-100-units-the-cover-clinic.jpg" target="_blank">
+                <img src="https://static.hdmall.co.th/1056x1056/webp/system/image_attachments/images/000/246/126/original/bo-new-gen-program-100-units-the-cover-clinic.jpg" 
+                  alt="Thumbnail 1" style="width: 60px; height: 60px;" class="object-cover border rounded-lg hover:shadow-md">
+              </a>
+              <a href="https://static.hdmall.co.th/1056x1056/webp/system/brands/general_brand_images/5431/original/IMG_1731_mix_resize.jpg" target="_blank">
+                <img src="https://static.hdmall.co.th/1056x1056/webp/system/brands/general_brand_images/5431/original/IMG_1731_mix_resize.jpg" 
+                  alt="Thumbnail 2" style="width: 60px; height: 60px;" class="object-cover border rounded-lg hover:shadow-md">
+              </a>
+              <a href="https://static.hdmall.co.th/1056x1056/webp/system/brands/general_brand_images/5433/original/IMG_1740_mix_resize.jpg" target="_blank">
+                <img src="https://static.hdmall.co.th/1056x1056/webp/system/brands/general_brand_images/5433/original/IMG_1740_mix_resize.jpg" 
+                  alt="Thumbnail 3" style="width: 60px; height: 60px;" class="object-cover border rounded-lg hover:shadow-md">
+              </a>
+            </div>
+            
+            
+
+      <!-- Product Details -->
+      <div class="flex justify-end">
+        <div class="flex-1">
+          <h2 class="text-3xl font-semibold mb-2 text-gray-800">ยกกระชับใบหน้า HIFU - ทั่วใบหน้า</h2>
+          <div class="flex items-center gap-2 text-[var(--color-turquoise)]">
+            <span>⭐⭐⭐⭐</span>
+            <span class="text-gray-600">(4.8 - 287 reviews)</span>
+          </div>
+          <p class="text-[var(--color-turquoise)] text-3xl font-bold mt-4">฿1600</p>
+          <p class="text-gray-500 line-through">฿3500</p>
+          <div class="mt-4 flex items-center gap-2">
+            <img src="https://png.pngtree.com/png-vector/20240312/ourlarge/pngtree-cartoon-character-doctor-png-image_11931235.png" 
+                 alt="Dr. Skin" 
+                 class="rounded-full object-cover" 
+                 style="width: 100px; height: 100px;">
+            <p class="text-sm text-gray-700">By: Dr. Skin</p>
+          </div>
+          <div class="mt-6">
+            <label for="qty" class="block text-sm font-medium text-gray-700">Qty:</label>
+            <input type="number" id="qty" value="1" min="1"
+                   class="w-20 border rounded-md p-2 mt-2 text-center shadow-sm focus:ring-[var(--color-turquoise)] focus:border-[var(--color-turquoise)]">
+          </div>
+          <div class="flex gap-4 mt-6">
+            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-secondary">Buy Now</button>
+          </div>
+          <div class="mt-6">
+            <h3 class="font-semibold text-lg text-gray-800">Description</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              บริการยกกระชับผิวหน้าด้วยเทคโนโลยี HIFU ช่วยลดริ้วรอยและยกกระชับใบหน้าได้อย่างมีประสิทธิภาพ
+            </p>
+          </div>
+        </div>
+      </div>
+ 
+  <!-- <script>
+    // Change image function
+    function changeImage(thumbnail) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = thumbnail.src;
+    }
+  </script> -->
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+---
+import Payment2 from '~/components/widgets/Payment2.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+
+// export interface Props {
+//   locale: string;
+// }
+
+// const { locale } = Astro.props;
+
+const metadata = {
+  title: 'Envyz Me  — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+
+
+// export function getStaticPaths() {
+//   return [
+//     { params: { locale: "en" } },
+//     { params: { locale: "fr" } },
+//     { params: { locale: "th" } },
+//     { params: { locale: "la" } },
+//   ];
+// }
+const { locale, productId } = Astro.params;
+
+// const id = Astro.url.searchParams.get('id');
+// console.log(id)
+---
+
+<PageLayout locale={locale} metadata={metadata}>
+<Payment2/>
+</PageLayout
+>
