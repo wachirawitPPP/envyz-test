@@ -1,0 +1,14 @@
+---
+import Payment2 from "~/components/widgets/Payment2.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
+const { locale } = Astro.params;
+const metadata = {
+  title:
+    "AstroWind — Free template for creating websites with Astro + Tailwind CSS",
+  ignoreTitleTemplate: true,
+};
+---
+
+<PageLayout metadata={metadata} locale={locale}>
+  <Payment2/>
+</PageLayout>

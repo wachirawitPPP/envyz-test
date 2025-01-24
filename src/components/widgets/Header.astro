@@ -2,13 +2,13 @@
 import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
-import ToggleMenu from '~/components/common/ToggleMenu.astro';
-import Button from '~/components/ui/Button.astro';
-import { getTranslations, t } from '../../i18n';
-import logo from '~/assets/images/apsx_logo.png';
+// import ToggleMenu from '~/components/common/ToggleMenu.astro';
+// import Button from '~/components/ui/Button.astro';
+import { t } from '../../i18n';
+// import logo from '~/assets/images/apsx_logo.png';
 
-import { getHomePermalink } from '~/utils/permalinks';
-import { trimSlash, getAsset } from '~/utils/permalinks';
+// import { getHomePermalink } from '~/utils/permalinks';
+// import { trimSlash } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 import SwitchLang from '../SwitchLang';
 import UserDropDown from './UserDropDown';
@@ -44,27 +44,27 @@ export interface Props {
 const {
   id = 'header',
   links = [],
-  actions = [],
+  // actions = [],
   isSticky = false,
   isDark = false,
   isFullWidth = false,
   showToggleTheme = false,
-  showRssFeed = false,
-  position = 'center',
+  // showRssFeed = false,
+  // position = 'center',
   locale = 'en',
 } = Astro.props;
 
-const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
-let isMenuOpen = false;
+// const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+// let isMenuOpen = false;
 let isSidebarOpen = false;
 
-const toggleMenu = () => {
-  isMenuOpen = !isMenuOpen;
-};
+// const toggleMenu = () => {
+//   isMenuOpen = !isMenuOpen;
+// };
 
-const toggleSidebar = () => {
-  isSidebarOpen = !isSidebarOpen;
-};
+// const toggleSidebar = () => {
+//   isSidebarOpen = !isSidebarOpen;
+// };
 ---
 <div
   id="backdrop"
@@ -230,16 +230,16 @@ const toggleSidebar = () => {
     const toggleButton = e.target.closest("[data-toggle-sidebar]");
 
     if (toggleButton) {
-      sidebar.classList.toggle("-translate-x-full");
-      sidebar.classList.toggle("translate-x-0");
-      backdrop.classList.toggle("hidden");
+      sidebar?.classList.toggle("-translate-x-full");
+      sidebar?.classList.toggle("translate-x-0");
+      backdrop?.classList.toggle("hidden");
       return;
     }
 
-    if (!sidebar.contains(e.target) && !toggleButton) {
-      sidebar.classList.add("-translate-x-full");
-      sidebar.classList.remove("translate-x-0");
-      backdrop.classList.add("hidden");
+    if (!sidebar?.contains(e.target) && !toggleButton) {
+      sidebar?.classList.add("-translate-x-full");
+      sidebar?.classList.remove("translate-x-0");
+      backdrop?.classList.add("hidden");
     }
   });
 </script>

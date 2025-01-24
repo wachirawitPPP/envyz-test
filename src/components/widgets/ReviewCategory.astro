@@ -1,270 +1,400 @@
 ---
 const detailreview = [
-{
-  "title": "HDreview",
-  "header": "HDreview ตามหมวดบริการ",
-  "imageUrl": "https://via.placeholder.com/400x200.png?text=Image",
-  "content": "HDreview บอกเล่าสถานการณ์จริง อธิบายทุกขั้นตอนการใช้บริการ พร้อมรูปภาพ เปรียบเทียบ Before และ After และวีดีโอจากผู้ใช้บริการตามหมวดหมู่ต่างๆ ไม่ว่าจะเป็น รีวิวสุขภาพ รีวิวความงาม โดยเผยเคล็ดลับและบริการให้ใช้ตัดสินใจ เพื่อให้ท่านสะดวกในการค้นหาบทวิจารณ์ และตัดสินใจในการใช้บริการจาก HDmall.co.th ศูนย์รวมบริการสุขภาพ ทำฟัน และความงามที่ใหญ่ที่สุดในประเทศไทย"
-}
-
-
-
-
-
+  {
+    title: "HDreview",
+    header: "HDreview ตามหมวดบริการ",
+    imageUrl: "https://via.placeholder.com/400x200.png?text=Image",
+    content:
+      "HDreview บอกเล่าสถานการณ์จริง อธิบายทุกขั้นตอนการใช้บริการ พร้อมรูปภาพ เปรียบเทียบ Before และ After และวีดีโอจากผู้ใช้บริการตามหมวดหมู่ต่างๆ ไม่ว่าจะเป็น รีวิวสุขภาพ รีวิวความงาม โดยเผยเคล็ดลับและบริการให้ใช้ตัดสินใจ เพื่อให้ท่านสะดวกในการค้นหาบทวิจารณ์ และตัดสินใจในการใช้บริการจาก HDmall.co.th ศูนย์รวมบริการสุขภาพ ทำฟัน และความงามที่ใหญ่ที่สุดในประเทศไทย",
+  },
 ];
-
 ---
-<div class="bg-white py-12 px-6">
-    <!-- Header Section -->
-    <div class="max-w-7xl mx-auto">
-     <h1 class="text-3xl font-bold text-gray-800 text-left">รีวิวตามหมวดหมู่บริการ</h1>
-        
-        <!-- เพิ่มคลาสสำหรับปรับขนาดภาพ -->
+
+<div class="px-6 py-12 bg-white">
+  <!-- Header Section -->
+  <div class="mx-auto max-w-7xl">
+    <h1 class="text-3xl font-bold text-left text-gray-800">
+      รีวิวตามหมวดหมู่บริการ
+    </h1>
+
+    <!-- เพิ่มคลาสสำหรับปรับขนาดภาพ -->
+    <img
+      src="https://godreamcast.com/blog/wp-content/uploads/2024/06/Increase-Attendees-At-Events-6-Successful-Engagement-Strategies-Ideas.jpg"
+      alt="รีวิวจากผู้ใช้งานจริง"
+      class="w-full h-auto mt-10 rounded-lg"
+    />
+
+    <p class="mt-6 text-lg text-left text-gray-600">
+      Review ที่แบ่งปันประสบการณ์จริงจากผู้ใช้บริการ
+      พร้อมรายละเอียดทุกขั้นตอนการรับบริการ รวมทั้งภาพ Before-After
+      และรีวิวจากผู้ใช้จริงในหลากหลายหมวดหมู่ เช่น สุขภาพ การทำฟัน และความงาม
+      โดยจัดหมวดหมู่บริการอย่างชัดเจน
+      เพื่อความสะดวกในการค้นหารีวิวและตัดสินใจเลือกบริการที่ตอบโจทย์คุณ
+    </p>
+  </div>
+</div>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>รีวิวโปรแกรมสุขภาพ</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* เพิ่มเอฟเฟกต์ Hover และแอนิเมชัน */
+  .hover-effect:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+<body class="bg-gray-100">
+  <div class="container px-4 py-8 mx-auto">
+    <!-- Header -->
+    <header class="mb-8 text-left">
+      <h1 class="text-2xl font-bold text-gray-700">รีวิวโปรแกรมสุขภาพ</h1>
+      <p class="text-gray-600"></p>
+    </header>
+
+    <!-- Grid Section -->
+    <section class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+      <!-- Example Item -->
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
         <img
-          src="https://godreamcast.com/blog/wp-content/uploads/2024/06/Increase-Attendees-At-Events-6-Successful-Engagement-Strategies-Ideas.jpg"
-          alt="รีวิวจากผู้ใช้งานจริง"
-          class="w-full h-auto rounded-lg mt-10"
+          src="/src/assets/images/opd.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
         />
-        
-
-        <p class="text-gray-600 mt-6 text-left text-lg">
-            Review ที่แบ่งปันประสบการณ์จริงจากผู้ใช้บริการ พร้อมรายละเอียดทุกขั้นตอนการรับบริการ รวมทั้งภาพ Before-After และรีวิวจากผู้ใช้จริงในหลากหลายหมวดหมู่ 
-            เช่น สุขภาพ การทำฟัน และความงาม โดยจัดหมวดหมู่บริการอย่างชัดเจน เพื่อความสะดวกในการค้นหารีวิวและตัดสินใจเลือกบริการที่ตอบโจทย์คุณ
-          </p>
+        <p class="text-base font-medium text-center">ตรวจสุขภาพ</p>
       </div>
-    </div>
-    
 
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/health.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ปรึกษาหมอออนไลน์</p>
+      </div>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>รีวิวโปรแกรมสุขภาพ</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-    /* เพิ่มเอฟเฟกต์ Hover และแอนิเมชัน */
-    .hover-effect:hover {
-        transform: scale(1.1);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease-in-out;
-    }
-</style>
-</head>
-<body class="bg-gray-100">
-<div class="container mx-auto px-4 py-8">
-    <!-- Header -->
-    <header class="text-left mb-8">
-        <h1 class="text-2xl font-bold text-gray-700">รีวิวโปรแกรมสุขภาพ</h1>
-        <p class="text-gray-600"></p>
-    </header>
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/massage.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">กายภาพบำบัด</p>
+      </div>
 
-    <!-- Grid Section -->
-    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-        <!-- Example Item -->
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/opd.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ตรวจสุขภาพ</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/ultrasound.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ตรวจอัตราซาวด์</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/health.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ปรึกษาหมอออนไลน์</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/pregnant-test.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">วัคซีน</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/massage.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">กายภาพบำบัด</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/acupuncture.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">แพทย์แผนจีน-ไทย</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/ultrasound.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ตรวจอัตราซาวด์</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/tooth.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ทันตกรรม</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/pregnant-test.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">วัคซีน</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/health.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ดูแลผู้ป่วยสูงอายุ</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/acupuncture.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">แพทย์แผนจีน-ไทย</p>
-        </div>
-        
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/tooth.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ทันตกรรม</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/sneezing.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ตรวจภูมิแพ้</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/health.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ดูแลผู้ป่วยสูงอายุ</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/lungs.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ปอด</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/sneezing.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ตรวจภูมิแพ้</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/pregnant-test.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ตับ</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/lungs.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ปอด</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/kidneys.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">ไต</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/pregnant-test.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ตับ</p>
-        </div>
-        
+      <div
+        class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+      >
+        <img
+          src="/src/assets/images/nursing-home.png"
+          alt="ตรวจสุขภาพ"
+          class="w-20 h-20 mb-3"
+        />
+        <p class="text-base font-medium text-center">กระดูกและข้อ</p>
+      </div>
 
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/kidneys.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ไต</p>
-        </div>
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/nursing-home.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">กระดูกและข้อ</p>
-        </div>
-        
-
-
-        <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>รีวิวโปรแกรมสุขภาพ</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-    /* เพิ่มเอฟเฟกต์ Hover และแอนิเมชัน */
-    .hover-effect:hover {
-        transform: scale(1.1);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease-in-out;
-    }
-</style>
-</head>
-<body class="bg-gray-100">
-<div class="container mx-auto px-4 py-8">
-    <!-- Header -->
-    <header class="text-left mb-8">
-        <h1 class="text-2xl font-bold text-gray-700">รีวิวโปรแกรมความงาม</h1>
-        <p class="text-gray-600"></p>
-    </header>
-
-    <!-- Grid Section -->
-    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-        <!-- Example Item -->
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/breast-cancer.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">เสริมหน้าอก</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/rhinoplasty.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">เสริมจมูก</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/eye.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ทำตา</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/jaw-contouring.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ทำคาง</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/acne.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">รักษาสิว</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/hair-transplant.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">รักษาผมร่วงปลูกผม</p>
-        </div>
-        
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/genioplasty.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ทำHIFU</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/lifting.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ยกกระชับใบหน้า</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/nursing-home.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ตรวจสุขภาพ</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/wedding.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ตรวจสุขภาพ</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/botox-injection.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ฉีดหน้า</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/face-massage.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">นวดหน้า</p>
-        </div>
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/dropper.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ดริปวิตามิน</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/fat-removal.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ดูด-สลายไขมัน</p>
-        </div>
-        
-
-        <div class="flex flex-col items-center p-6 bg-white text-gray-700 rounded-lg shadow-md hover-effect cursor-pointer">
-            <img src="/src/assets/images/dropper.png" alt="ตรวจสุขภาพ" class="w-20 h-20 mb-3">
-            <p class="text-base font-medium text-center">ดรอปวิตามิน</p>
-        </div>
-        
-
-      
-        
-
-    
-
-        <!-- Repeat for other items -->
-        </section>
-    </div>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>รีวิวโปรแกรมสุขภาพ</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        /* เพิ่มเอฟเฟกต์ Hover และแอนิเมชัน */
+        .hover-effect:hover {
+          transform: scale(1.1);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease-in-out;
+        }
+      </style>
     </section>
-    </div>
+    <body class="bg-gray-100">
+      <div class="container px-4 py-8 mx-auto">
+        <!-- Header -->
+        <header class="mb-8 text-left">
+          <h1 class="text-2xl font-bold text-gray-700">รีวิวโปรแกรมความงาม</h1>
+          <p class="text-gray-600"></p>
+        </header>
+
+        <!-- Grid Section -->
+        <section class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          <!-- Example Item -->
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/breast-cancer.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">เสริมหน้าอก</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/rhinoplasty.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">เสริมจมูก</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/eye.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ทำตา</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/jaw-contouring.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ทำคาง</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/acne.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">รักษาสิว</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/hair-transplant.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">รักษาผมร่วงปลูกผม</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/genioplasty.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ทำHIFU</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/lifting.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ยกกระชับใบหน้า</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/nursing-home.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ตรวจสุขภาพ</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/wedding.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ตรวจสุขภาพ</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/botox-injection.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ฉีดหน้า</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/face-massage.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">นวดหน้า</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/dropper.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ดริปวิตามิน</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/fat-removal.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ดูด-สลายไขมัน</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-6 text-gray-700 bg-white rounded-lg shadow-md cursor-pointer hover-effect"
+          >
+            <img
+              src="/src/assets/images/dropper.png"
+              alt="ตรวจสุขภาพ"
+              class="w-20 h-20 mb-3"
+            />
+            <p class="text-base font-medium text-center">ดรอปวิตามิน</p>
+          </div>
+
+          <!-- Repeat for other items -->
+        </section>
+      </div>
+    </body>
+  </div>
 </body>
-</html>
 
-
-
-</div>
 <!-- Repeat similar structure for other cards -->
-</div>
-</section>

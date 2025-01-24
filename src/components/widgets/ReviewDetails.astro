@@ -1,381 +1,483 @@
 ---
 const review = [
   {
-    "header": {
-      "title": "รวมรีวิวผู้ใช้งานจริงจาก HDreview",
-      "description": "HDreview รวบรวมประสบการณ์การใช้บริการจาก Hdmall.co.th กับคลินิกและโรงพยาบาลต่าง ๆ ที่มีความน่าเชื่อถือ เพื่อให้คุณได้อ่านความคิดเห็นจากผู้ใช้จริง",
-      "image": {
-        "src": "path-to-header-image.jpg",
-        "alt": "HDreview Banner"
-      }
+    header: {
+      title: 'รวมรีวิวผู้ใช้งานจริงจาก HDreview',
+      description:
+        'HDreview รวบรวมประสบการณ์การใช้บริการจาก Hdmall.co.th กับคลินิกและโรงพยาบาลต่าง ๆ ที่มีความน่าเชื่อถือ เพื่อให้คุณได้อ่านความคิดเห็นจากผู้ใช้จริง',
+      image: {
+        src: 'path-to-header-image.jpg',
+        alt: 'HDreview Banner',
+      },
     },
-    "reviews": {
-      "title": "รีวิวที่เราอยากให้คุณได้อ่าน",
-      "items": [
+    reviews: {
+      title: 'รีวิวที่เราอยากให้คุณได้อ่าน',
+      items: [
         {
-          "image": "path-to-image1.jpg",
-          "alt": "Review 1",
-          "text": "โบท็อกซ์ (Botox)"
+          image: 'path-to-image1.jpg',
+          alt: 'Review 1',
+          text: 'โบท็อกซ์ (Botox)',
         },
         {
-          "image": "path-to-image2.jpg",
-          "alt": "Review 2",
-          "text": "ตา Hi-Fu"
+          image: 'path-to-image2.jpg',
+          alt: 'Review 2',
+          text: 'ตา Hi-Fu',
         },
         {
-          "image": "path-to-image3.jpg",
-          "alt": "Review 3",
-          "text": "ฉีดฟิลเลอร์"
+          image: 'path-to-image3.jpg',
+          alt: 'Review 3',
+          text: 'ฉีดฟิลเลอร์',
         },
         {
-          "image": "path-to-image4.jpg",
-          "alt": "Review 4",
-          "text": "จัดฟันใส"
-        }
-      ]
+          image: 'path-to-image4.jpg',
+          alt: 'Review 4',
+          text: 'จัดฟันใส',
+        },
+      ],
     },
-    "categories": {
-      "title": "รีวิวตามหมวดหมู่บริการ",
-      "items": [
-        "เสริมจมูก",
-        "เสริมหน้าอก",
-        "ฉีดฟิลเลอร์",
-        "ทำรีเทนเนอร์",
-        "ฟอกสีฟัน"
-      ]
+    categories: {
+      title: 'รีวิวตามหมวดหมู่บริการ',
+      items: ['เสริมจมูก', 'เสริมหน้าอก', 'ฉีดฟิลเลอร์', 'ทำรีเทนเนอร์', 'ฟอกสีฟัน'],
     },
-    "clinics": {
-      "title": "รีวิวจากสถานบริการ",
-      "logos": [
+    clinics: {
+      title: 'รีวิวจากสถานบริการ',
+      logos: [
         {
-          "image": "path-to-logo1.jpg",
-          "alt": "Clinic Logo 1"
+          image: 'path-to-logo1.jpg',
+          alt: 'Clinic Logo 1',
         },
         {
-          "image": "path-to-logo2.jpg",
-          "alt": "Clinic Logo 2"
+          image: 'path-to-logo2.jpg',
+          alt: 'Clinic Logo 2',
         },
         {
-          "image": "path-to-logo3.jpg",
-          "alt": "Clinic Logo 3"
+          image: 'path-to-logo3.jpg',
+          alt: 'Clinic Logo 3',
         },
         {
-          "image": "path-to-logo4.jpg",
-          "alt": "Clinic Logo 4"
-        }
-      ]
-    }
-  }
+          image: 'path-to-logo4.jpg',
+          alt: 'Clinic Logo 4',
+        },
+      ],
+    },
+  },
 ];
-
 ---
-<div class="bg-white py-12 px-6">
-  <!-- Header Section -->
-  <div class="max-w-7xl mx-auto">
-   <h1 class="text-3xl font-bold text-gray-800 text-left">รวมรีวิวผู้ใช้งานจริง</h1>
-      
-      <!-- เพิ่มคลาสสำหรับปรับขนาดภาพ -->
+
+<div class="relative overflow-hidden w-full max-w-5xl mx-auto">
+  <!-- Slider Container -->
+  <div class="flex transition-transform duration-500 ease-in-out slider">
+    <div class="flex-shrink-0 w-full">
       <img
-        src="https://godreamcast.com/blog/wp-content/uploads/2024/01/Post-Event-Engagement-Strategies-To-Keep-The-Audience-Engaged-min.jpg?fbclid=IwY2xjawHjOHVleHRuA2FlbQIxMAABHfHg-DHHInYBVdq8N3lGMZjc4EcMbxyfW46opazfkImnGs7UlHtfkcKaEg_aem_7Hr0alwtx7ZI_wX2VI5MsA"
-        alt="รีวิวจากผู้ใช้งานจริง"
-        class="w-full h-auto rounded-lg mt-10"
+        src="https://inz-clinic.com/wp-content/uploads/2023/11/231027-button-web-inz-%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B9%80%E0%B8%84%E0%B8%AA%E0%B8%A3%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%97%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99-inZeye-mobile-540x225px.png"
+        alt="Promotion 1"
+        class="w-full h-64 md:h-80 lg:h-96 object-cover object-center"
       />
-      
-      <p class="text-gray-600 mt-6 text-left text-lg">
-        Review รวบรวมประสบการณ์จากผู้ใช้บริการจริงจาก envyz.me ที่มาแบ่งปันรายละเอียดเกี่ยวกับขั้นตอนการใช้บริการจากคลินิกและโรงพยาบาลชั้นนำ โดยผู้ใช้บริการจะมาอธิบายผลลัพธ์ที่ได้จากการรักษาหรือบริการต่าง ๆ รวมถึงความประทับใจในการได้รับบริการจากพนักงานและคุณหมออย่างละเอียดและจริงใจ ข้อมูลเหล่านี้จะช่วยให้คุณมีความมั่นใจในการตัดสินใจเลือกใช้บริการและทำให้การเลือกคลินิกหรือโรงพยาบาลที่เหมาะสมกับความต้องการของคุณง่ายยิ่งขึ้น
-      </p>
+    </div>
+    <div class="flex-shrink-0 w-full">
+      <img
+        src="https://static.hd.co.th/system/redactor2_assets/images/16101/content_review-before-after-lip-filler-at-ms-clinic-nawamin-701.webp"
+        alt="Promotion 2"
+        class="w-full h-64 md:h-80 lg:h-96 object-cover object-center"
+      />
+    </div>
+    <div class="flex-shrink-0 w-full">
+      <img
+        src="https://emmaclinicthailand.com/wp-content/uploads/2024/04/big-nose-surgery.webp"
+        alt="Promotion 3"
+        class="w-full h-64 md:h-80 lg:h-96 object-cover object-center"
+      />
+    </div>
+    <div class="flex-shrink-0 w-full">
+      <img
+        src="https://sowongroup.com/wp-content/uploads/2023/07/02-02-768x384.jpg"
+        alt="Promotion 4"
+        class="w-full h-64 md:h-80 lg:h-96 object-cover object-center"
+      />
+    </div>
   </div>
+
+  <button
+    class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-10 border border-gray-200 border-opacity-20 text-black p-2 md:p-3 lg:p-4 rounded-full shadow-lg hover:bg-opacity-30 hover:border-opacity-50 hover:shadow-xl transition duration-300 prev-btn"
+  >
+    ‹
+  </button>
+  <button
+    class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-10 border border-gray-200 border-opacity-20 text-black p-2 md:p-3 lg:p-4 rounded-full shadow-lg hover:bg-opacity-30 hover:border-opacity-50 hover:shadow-xl transition duration-300 next-btn"
+  >
+    ›
+  </button>
 </div>
 
+<div class="flex flex-col items-center justify-center px-6 sm:px-10 lg:px-20 max-w-6xl mx-auto">
+  <p class="mt-6 text-lg text-gray-600 opacity-90 text-justify leading-relaxed">
+    Review รวบรวมประสบการณ์จากผู้ใช้บริการจริงจาก envyz.me
+    ที่มาแบ่งปันรายละเอียดเกี่ยวกับขั้นตอนการใช้บริการจากคลินิกและโรงพยาบาลชั้นนำ
+    โดยผู้ใช้บริการจะมาอธิบายผลลัพธ์ที่ได้จากการรักษาหรือบริการต่าง ๆ
+    รวมถึงความประทับใจในการได้รับบริการจากพนักงานและคุณหมออย่างละเอียดและจริงใจ
+    ข้อมูลเหล่านี้จะช่วยให้คุณมีความมั่นใจในการตัดสินใจเลือกใช้บริการและทำให้การเลือกคลินิกหรือโรงพยาบาลที่เหมาะสมกับความต้องการของคุณง่ายยิ่งขึ้น
+  </p>
+</div>
 
-<!-- Reviews Section -->
-<section class="py-9 bg-gray-50">
-  <h2 class="text-2xl font-bold text-gray-800 text-center mb-8">รีวิวตามหมวดหมู่บริการ</h2>
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto px-4">
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+</style>
+
+<section class="py-9 bg-white">
+  <h2 class="text-xl font-semibold text-gray-600 text-center mb-8 ml-10">รีวิวตามหมวดหมู่บริการ</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto px-6">
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://www.aspireclinicphuket.com/wp-content/uploads/2023/10/%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%88%E0%B8%A1%E0%B8%B9%E0%B8%81-1024x1024.png"
+        alt="เสริมจมูก"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">เสริมจมูก</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://restoresdplasticsurgery.com/wp-content/uploads/2019/09/shutterstock_1007115442.jpg.webp?fbclid=IwY2xjawHjOZFleHRuA2FlbQIxMAABHTLbFJcnt7kyyWBM8XG4bb117la1LWAim4Fxz06VnRgLbV899g80mzsRgA_aem_Fd04oyOD8-aWEIrhtZDo2A"
+        alt="เสริมหน้าอก"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">เสริมหน้าอก</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://static.bangkokhospital.com/uploads/2020/04/IHL-Cn-Invisalign.jpg?fbclid=IwY2xjawHjOVhleHRuA2FlbQIxMAABHexdb4sou2f-GrG2CKAyXJu1K68KIV4oz2SIVhJlEY1xa7pxflvwq6K6eA_aem_YHsy0PWbjqvKkDMKuaRo9g"
+        alt="จัดฟันใส"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">จัดฟันใส</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://s3vmwebprd.s3.ap-southeast-1.amazonaws.com/public/articles/c0f8pvIx1nhL5IRzTQVf804zou5qiljhv2J1HoGu.jpg?fbclid=IwY2xjawHjObJleHRuA2FlbQIxMAABHXEtYdceeuAP3t3lp2e8yNKtCEbk0UFha69AhES-SL3MGvHh17dXPNY_5w_aem_7ccaVHC5iPU9S4QV46G-Xg"
+        alt="ตรวจภายใน"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">ตรวจภายใน</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://cdn0-production-images-kly.akamaized.net/RTDDEBVTXCg1P8ccZ5pmCL7Q6HI=/0x0:2500x1409/800x450/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3133608/original/073164100_1589963089-makan_kukis.jpg?fbclid=IwY2xjawHjOc5leHRuA2FlbQIxMAABHTLbFJcnt7kyyWBM8XG4bb117la1LWAim4Fxz06VnRgLbV899g80mzsRgA_aem_Fd04oyOD8-aWEIrhtZDo2A"
+        alt="ตรวจภูมิแพ้อาหารแฝง"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">ตรวจภูมิแพ้อาหารแฝง</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://www.aic-clinic.com/wp-content/uploads/2021/09/31-1-fillers-eyes-makeup.jpg?fbclid=IwY2xjawHjOeZleHRuA2FlbQIxMAABHfHg-DHHInYBVdq8N3lGMZjc4EcMbxyfW46opazfkImnGs7UlHtfkcKaEg_aem_7Hr0alwtx7ZI_wX2VI5MsA"
+        alt="ฉีดโบท๊อก"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">ฉีดโบท๊อก</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://www.thaitopclinic.com/wp-content/uploads/2021/10/HIFU-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%94%E0%B8%B9%E0%B9%81%E0%B8%A5%E0%B8%9C%E0%B8%B4%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%99%E0%B8%B4%E0%B8%A2%E0%B8%A1.jpg?fbclid=IwY2xjawHjOfdleHRuA2FlbQIxMAABHexdb4sou2f-GrG2CKAyXJu1K68KIV4oz2SIVhJlEY1xa7pxflvwq6K6eA_aem_YHsy0PWbjqvKkDMKuaRo9g"
+        alt="ทำ HIFU"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">ทำ HIFU</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://i.pinimg.com/736x/d5/28/3b/d5283b65a971e51f1787e563e29fcd05.jpg"
+        alt="เลเซอร์ขน"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">เลเซอร์ขน</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://i.pinimg.com/736x/a8/3c/bb/a83cbbf6c58f6b44743a08fa07795952.jpg"
+        alt="ฉีดฟิลเลอร์"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">ฉีดฟิลเลอร์</span>
+      </div>
+    </div>
+    <div class="relative w-48 h-48 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://www.bizpromptinfo.com/wp-content/uploads/2022/03/%E0%B8%AA%E0%B8%81%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%84%E0%B8%A3%E0%B9%8C.png?fbclid=IwY2xjawHjOqNleHRuA2FlbQIxMAABHTLbFJcnt7kyyWBM8XG4bb117la1LWAim4Fxz06VnRgLbV899g80mzsRgA_aem_Fd04oyOD8-aWEIrhtZDo2A"
+        alt="ดูทั้งหมด"
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <span class="text-white text-lg font-bold">ดูทั้งหมด</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-9 bg-white">
+  <h2 class="text-xl font-semibold text-gray-600 text-center mb-8 ml-10">รีวิวจากสถานบริการ</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto px-6">
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S6e80d1d8-0d1f-4948-9c5e-0189345015bb.png"
+        alt="ZHENFU CLINIC"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S19d505a5-1554-4464-9778-413394e663c5.jpg"
+        alt="MAMU CLINIC"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sf6ea2c70-8826-453b-b240-1ca99c3bca84.jpg"
+        alt="Dr.Chom Clinic"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sb3f82747-7342-434c-b105-98af05ccaead.png"
+        alt="KayKay Clinic"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sf906cb70-b3c2-49a9-b2e6-7ea248c48b96.png"
+        alt="SYM Clinic"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S299b2e24-3bc6-4376-a28f-240e70d1df2d.png"
+        alt="V LACOL Clinic"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S299b2e24-3bc6-4376-a28f-240e70d1df2d.png"
+        alt="V LACOL Clinic"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S299b2e24-3bc6-4376-a28f-240e70d1df2d.png"
+        alt="V LACOL Clinic"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+    >
+      <img
+        src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Se50981e2-bf77-4d79-b400-7d490a6e0cbd.png"
+        alt="MIRIN Aesthetic"
+        class="object-cover w-full h-40"
+      />
+    </div>
+    <div
+      class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center"
+    >
+      <span class="text-teal-600 font-semibold text-center">ดูทั้งหมด</span>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 bg-white">
+  <h2 class="text-xl font-semibold text-gray-600 text-center mb-8 ml-10">วิดีโอรีวิวจากลูกค้าจริง</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto px-6">
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe src="https://www.youtube.com/embed/example" class="rounded-lg shadow-lg w-full h-full" allowfullscreen
+      ></iframe>
+    </div>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe src="https://www.youtube.com/embed/example2" class="rounded-lg shadow-lg w-full h-full" allowfullscreen
+      ></iframe>
+    </div>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe src="https://www.youtube.com/embed/example3" class="rounded-lg shadow-lg w-full h-full" allowfullscreen
+      ></iframe>
+    </div>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe src="https://www.youtube.com/embed/example4" class="rounded-lg shadow-lg w-full h-full" allowfullscreen
+      ></iframe>
+    </div>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe src="https://www.youtube.com/embed/example4" class="rounded-lg shadow-lg w-full h-full" allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 bg-gradient-to-br from-white via-white to-white">
+  <!-- Section Header -->
+  <h2 class="text-xl font-extrabold text-gray-600 text-center mb-10">บริการที่คุณอาจสนใจ</h2>
+
+  <!-- Service Cards -->
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto px-6">
     <!-- Card 1 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://www.aspireclinicphuket.com/wp-content/uploads/2023/10/%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%88%E0%B8%A1%E0%B8%B9%E0%B8%81-1024x1024.png?fbclid=IwY2xjawHjOQdleHRuA2FlbQIxMAABHW55gMQtc6M5HVIzO8ttoPzTTgE2hAynL0Pzm3sOOMkiPJ1l6--kDx4kMQ_aem_Az4YGd5u2ops6ErLVqLX4w" alt="Service 1" class="w-full h-40 object-cover">
+    <div
+      class="relative rounded-xl shadow-lg bg-white hover:shadow-2xl hover:scale-105 transform transition duration-300 overflow-hidden group"
+    >
+      <img
+        src="https://i.pinimg.com/736x/a2/48/1a/a2481a2a6cd0e7787eb8c24973d0a74c.jpg"
+        alt="บริการเสริมจมูก"
+        class="object-cover w-full h-44 group-hover:brightness-75 transition duration-300"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50"
+      >
+        <p class="text-lg font-semibold text-white">เสริมจมูก</p>
+      </div>
     </div>
 
     <!-- Card 2 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://restoresdplasticsurgery.com/wp-content/uploads/2019/09/shutterstock_1007115442.jpg.webp?fbclid=IwY2xjawHjOZFleHRuA2FlbQIxMAABHTLbFJcnt7kyyWBM8XG4bb117la1LWAim4Fxz06VnRgLbV899g80mzsRgA_aem_Fd04oyOD8-aWEIrhtZDo2A" alt="Service 2" class="w-full h-40 object-cover">
+    <div
+      class="relative rounded-xl shadow-lg bg-white hover:shadow-2xl hover:scale-105 transform transition duration-300 overflow-hidden group"
+    >
+      <img
+        src="https://i.pinimg.com/736x/90/3b/8f/903b8fceeffd1ec58a96d53b064fa9c5.jpg"
+        alt="บริการทำฟัน"
+        class="object-cover w-full h-44 group-hover:brightness-75 transition duration-300"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50"
+      >
+        <p class="text-lg font-semibold text-white">จัดฟันใส</p>
+      </div>
     </div>
 
     <!-- Card 3 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://static.bangkokhospital.com/uploads/2020/04/IHL-Cn-Invisalign.jpg?fbclid=IwY2xjawHjOVhleHRuA2FlbQIxMAABHexdb4sou2f-GrG2CKAyXJu1K68KIV4oz2SIVhJlEY1xa7pxflvwq6K6eA_aem_YHsy0PWbjqvKkDMKuaRo9g" alt="Service 3" class="w-full h-40 object-cover">
+    <div
+      class="relative rounded-xl shadow-lg bg-white hover:shadow-2xl hover:scale-105 transform transition duration-300 overflow-hidden group"
+    >
+      <img
+        src="https://i.pinimg.com/736x/3c/e6/c0/3ce6c04dc1fcdb86d6e854a1922a3b15.jpg"
+        alt="บริการฉีดฟิลเลอร์"
+        class="object-cover w-full h-44 group-hover:brightness-75 transition duration-300"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50"
+      >
+        <p class="text-lg font-semibold text-white">ฉีดฟิลเลอร์</p>
+      </div>
     </div>
 
     <!-- Card 4 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://s3vmwebprd.s3.ap-southeast-1.amazonaws.com/public/articles/c0f8pvIx1nhL5IRzTQVf804zou5qiljhv2J1HoGu.jpg?fbclid=IwY2xjawHjObJleHRuA2FlbQIxMAABHXEtYdceeuAP3t3lp2e8yNKtCEbk0UFha69AhES-SL3MGvHh17dXPNY_5w_aem_7ccaVHC5iPU9S4QV46G-Xg" alt="Service 4" class="w-full h-40 object-cover">
+    <div
+      class="relative rounded-xl shadow-lg bg-white hover:shadow-2xl hover:scale-105 transform transition duration-300 overflow-hidden group"
+    >
+      <img
+        src="https://i.pinimg.com/736x/8e/51/84/8e51848f89fd11a2c18d8fb4bedc9a95.jpg"
+        alt="บริการ เลเซอร์ขน"
+        class="object-cover w-full h-44 group-hover:brightness-75 transition duration-300"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50"
+      >
+        <p class="text-lg font-semibold text-white">เลเซอร์ ขน</p>
+      </div>
     </div>
 
     <!-- Card 5 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://cdn0-production-images-kly.akamaized.net/RTDDEBVTXCg1P8ccZ5pmCL7Q6HI=/0x0:2500x1409/800x450/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3133608/original/073164100_1589963089-makan_kukis.jpg?fbclid=IwY2xjawHjOc5leHRuA2FlbQIxMAABHTLbFJcnt7kyyWBM8XG4bb117la1LWAim4Fxz06VnRgLbV899g80mzsRgA_aem_Fd04oyOD8-aWEIrhtZDo2A" alt="Service 5" class="w-full h-40 object-cover">
-    </div>
-
-    <!-- Card 6 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://www.aic-clinic.com/wp-content/uploads/2021/09/31-1-fillers-eyes-makeup.jpg?fbclid=IwY2xjawHjOeZleHRuA2FlbQIxMAABHfHg-DHHInYBVdq8N3lGMZjc4EcMbxyfW46opazfkImnGs7UlHtfkcKaEg_aem_7Hr0alwtx7ZI_wX2VI5MsA" alt="Service 6" class="w-full h-40 object-cover">
-    </div>
-
-    <!-- Card 7 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://www.thaitopclinic.com/wp-content/uploads/2021/10/HIFU-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%94%E0%B8%B9%E0%B9%81%E0%B8%A5%E0%B8%9C%E0%B8%B4%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%99%E0%B8%B4%E0%B8%A2%E0%B8%A1.jpg?fbclid=IwY2xjawHjOfdleHRuA2FlbQIxMAABHexdb4sou2f-GrG2CKAyXJu1K68KIV4oz2SIVhJlEY1xa7pxflvwq6K6eA_aem_YHsy0PWbjqvKkDMKuaRo9g" alt="Service 7" class="w-full h-40 object-cover">
-    </div>
-
-    <!-- Card 8 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg">
-      <img src="https://www.bizpromptinfo.com/wp-content/uploads/2022/03/%E0%B8%AA%E0%B8%81%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%84%E0%B8%A3%E0%B9%8C.png?fbclid=IwY2xjawHjOqNleHRuA2FlbQIxMAABHTLbFJcnt7kyyWBM8XG4bb117la1LWAim4Fxz06VnRgLbV899g80mzsRgA_aem_Fd04oyOD8-aWEIrhtZDo2A" alt="Service 8" class="w-full h-40 object-cover">
-    </div>
-  </div>
-</section>
-
-
-<section class="py-9 bg-gray-50">
-  <h2 class="text-2xl font-bold text-gray-800 text-center mb-8"> รีวิวจากสถานบริการ</h2>
-    <div class="flex overflow-x-auto space-x-8 items-center  justify-center max-w-7xl mx-auto">
-      <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-10 gap-4 max-w-7xl mx-auto px-4">
-      <!-- Logo 1 -->
-      <a href="https://classclinic-official.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S6e80d1d8-0d1f-4948-9c5e-0189345015bb.png"
-          alt="Clinic Logo 1"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-        />
-      </a>
-      <!-- Logo 2 -->
-      <a href="https://www.gangnamclinicth.net/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S9e68e94e-0f90-41c0-99e4-31e94cd34dbc.png"
-          alt="Clinic Logo 2"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-        />
-      </a>
-      <!-- Logo 3 -->
-      <a href="https://emmaclinicthailand.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S19d505a5-1554-4464-9778-413394e663c5.jpg"
-          alt="Clinic Logo 3"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-        />
-      </a>
-      <!-- Logo 4 -->
-      <a href="https://apsth-x.s3.ap-southeast-1.amazonaws.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sf6ea2c70-8826-453b-b240-1ca99c3bca84.jpg"
-          alt="Clinic Logo 4"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-        />
-      </a>
-       <!-- Logo 5 -->
-       <a href="https://classclinic-official.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sb3f82747-7342-434c-b105-98af05ccaead.png"
-          alt="Clinic Logo 1"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-        />
-      </a>
-      <!-- Logo 6 -->
-      <a href="https://www.gangnamclinicth.net/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sf906cb70-b3c2-49a9-b2e6-7ea248c48b96.png"
-          alt="Clinic Logo 2"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-        />
-      </a>
-      <!-- Logo 7 -->
-      <a href="https://emmaclinicthailand.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S299b2e24-3bc6-4376-a28f-240e70d1df2d.png"
-          alt="Clinic Logo 3"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-        />
-      </a>
-      <!-- Logo 8 -->
-      <a href="https://apsth-x.s3.ap-southeast-1.amazonaws.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Se50981e2-bf77-4d79-b400-7d490a6e0cbd.png"
-          alt="Clinic Logo 4"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-        />
-      </a>
-       <!-- Logo 9 -->
-       <a href="https://classclinic-official.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S3cac924e-a5b0-4854-ad0b-bf2c91b4a18d.jpg"
-          alt="Clinic Logo 1"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-        />
-      </a>
-      <!-- Logo 10 -->
-      <a href="https://www.gangnamclinicth.net/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S1a2b59b6-77bf-4b16-a07f-5182b1ab3894.png"
-          alt="Clinic Logo 2"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-        />
-      </a>
-      <!-- Logo 11 -->
-      <a href="https://emmaclinicthailand.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sc99c2864-6971-49d3-a028-1df9b9d1fbb0.png"
-          alt="Clinic Logo 3"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-        />
-      </a>
-      <!-- Logo 12 -->
-      <a href="https://apsth-x.s3.ap-southeast-1.amazonaws.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S8512d6a4-0aae-4b36-80a6-105a48592231.png"
-          alt="Clinic Logo 4"
-          class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-        />
-      </a>
-         <!-- Logo 13 -->
-         <a href="https://classclinic-official.com/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S9ec65baf-d710-4fa9-8044-e474ff6c0ca0.jpg"
-            alt="Clinic Logo 1"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-          />
-        </a>
-        <!-- Logo 14 -->
-        <a href="https://www.gangnamclinicth.net/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S33ccb3fe-1bdf-44a1-9587-b434dba32832.png"
-            alt="Clinic Logo 2"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-          />
-        </a>
-        <!-- Logo 15 -->
-        <a href="https://emmaclinicthailand.com/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S8d9df637-6a67-4598-9879-b85428c6824e.png"
-            alt="Clinic Logo 3"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-          />
-        </a>
-        <!-- Logo 16 -->
-        <a href="https://apsth-x.s3.ap-southeast-1.amazonaws.com/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sc7db93da-ca8f-43b8-9ed5-593af6cf9790.jpg"
-            alt="Clinic Logo 4"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-          />
-        </a>
-         <!-- Logo 17 -->
-         <a href="https://classclinic-official.com/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sa25a4a37-d9fe-4ca4-bef4-6fdb63172973.png"
-            alt="Clinic Logo 1"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-          />
-        </a>
-        <!-- Logo 18 -->
-        <a href="https://www.gangnamclinicth.net/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S0628c110-05e6-4916-9770-49266f26eb4f.jpg"
-            alt="Clinic Logo 2"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-          />
-        </a>
-        <!-- Logo 19 -->
-        <a href="https://emmaclinicthailand.com/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Sd8ad6643-6c1a-4b07-afb4-3f906b25fc1e.jpg"
-            alt="Clinic Logo 3"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:rotate-6"
-          />
-        </a>
-        <!-- Logo 20 -->
-        <a href="https://apsth-x.s3.ap-southeast-1.amazonaws.com/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/S8a0cadd6-c79f-4e20-961e-9f0ac62a7507.png"
-            alt="Clinic Logo 4"
-            class="w-24 h-24 object-contain rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:-rotate-6"
-          />
-        </a>
-        
-    
-        
-    </div>
-  </section>
-  
-  
-  
-  <script>
-    // Carousel functionality
-    const carousel = document.querySelector('.carousel');
-    const prevButton = document.querySelector('.carousel-prev');
-    const nextButton = document.querySelector('.carousel-next');
-  
-    prevButton.addEventListener('click', () => {
-      carousel.scrollBy({ left: -150, behavior: 'smooth' });
-    });
-  
-    nextButton.addEventListener('click', () => {
-      carousel.scrollBy({ left: 150, behavior: 'smooth' });
-    });
-  </script>
-  
-
-
-
-<section class="py-12 bg-gray-50">
-  <h2 class="text-2xl font-bold text-gray-800 text-left mb-8 max-w-3xl ml-40">วิดีโอรีวิวจากลูกค้าจริง</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 max-w-7xl mx-auto">
-      <div class="aspect-w-16 aspect-h-9">
-          <iframe src="https://www.youtube.com/embed/example" class="rounded-lg shadow-lg" allowfullscreen></iframe>
+    <div
+      class="relative rounded-xl shadow-lg bg-white hover:shadow-xl hover:scale-105 transform transition duration-300 overflow-hidden group"
+    >
+      <img
+        src="https://i.pinimg.com/736x/cc/58/bd/cc58bdfc325c5925ea40110902786daf.jpg"
+        alt="บริการ HIFU"
+        class="object-cover w-full h-44 group-hover:brightness-75 transition duration-300"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50"
+      >
+        <p class="text-lg font-semibold text-white">HIFU</p>
       </div>
-      <div class="aspect-w-16 aspect-h-9">
-          <iframe src="https://www.youtube.com/embed/example2" class="rounded-lg shadow-lg" allowfullscreen></iframe>
-      </div>
-      <div class="aspect-w-16 aspect-h-9">
-          <iframe src="https://www.youtube.com/embed/example3" class="rounded-lg shadow-lg" allowfullscreen></iframe>
-      </div>
-      <div class="aspect-w-16 aspect-h-9">
-        <iframe src="https://www.youtube.com/embed/example3" class="rounded-lg shadow-lg" allowfullscreen></iframe>
-    </div>
-    <div class="aspect-w-16 aspect-h-9">
-      <iframe src="https://www.youtube.com/embed/example3" class="rounded-lg shadow-lg" allowfullscreen></iframe>
-  </div>
-  </div>
-</section>
-
-
-
-<section class="py-12 bg-white">
-  <h2 class="text-2xl font-bold text-gray-800 text-left mb-8 max-w-3xl ml-40">บริการที่คุณอาจสนใจ</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto">
-    <div class="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg">
-      <img src="path-to-service1.jpg" alt="บริการเสริมจมูก" class="w-full h-32 object-cover rounded-md">
-      <p class="text-teal-600 mt-4 text-center">เสริมจมูก</p>
-    </div>
-    <div class="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg">
-      <img src="path-to-service2.jpg" alt="บริการทำฟัน" class="w-full h-32 object-cover rounded-md">
-      <p class="text-teal-600 mt-4 text-center">จัดฟันใส</p>
-    </div>
-    <div class="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg">
-      <img src="path-to-service3.jpg" alt="บริการฉีดฟิลเลอร์" class="w-full h-32 object-cover rounded-md">
-      <p class="text-teal-600 mt-4 text-center">ฉีดฟิลเลอร์</p>
-    </div>
-    <div class="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg">
-      <img src="path-to-service4.jpg" alt="บริการ HIFU" class="w-full h-32 object-cover rounded-md">
-      <p class="text-teal-600 mt-4 text-center">HIFU</p>
     </div>
   </div>
 </section>
+<script>
+  const slider = document.querySelector('.slider');
+  const nextBtn = document.querySelector('.next-btn');
+  const prevBtn = document.querySelector('.prev-btn');
 
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slider > div'); // Adjusted for Tailwind layout
+  const totalSlides = slides.length;
 
+  // Move to the next slide
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  });
 
-         
-</div>
-</div>
-<!-- Repeat similar structure for other cards -->
-</div>
-</section>
+  // Move to the previous slide
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+
+  // Update slider position
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  // Auto-slide (Optional)
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  }, 10000); // 10000ms = 10 seconds (adjusted for slower sliding)
+</script>

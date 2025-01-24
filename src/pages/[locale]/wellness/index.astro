@@ -1,14 +1,15 @@
 ---
-import Header from "~/components/widgets/Header.astro";
-import PageLayout from "~/layouts/PageLayout.astro";
-import { getTranslations, t } from "../../../i18n";
-import ProductList from "~/components/widgets/ProductList.jsx";
-import CareSection from "~/components/widgets/CareSection.astro";
-import CustomerReviews from "~/components/widgets/CustomerReviews.astro";
-import CustomerServices from "~/components/widgets/CustomerServices.astro";
+import Header from '~/components/widgets/Header.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getTranslations, t } from '../../../i18n';
+import ProductList from '~/components/widgets/ProductList.jsx';
+import CareSection from '~/components/widgets/CareSection.astro';
+import CustomerReviews from '~/components/widgets/CustomerReviews.astro';
+import CustomerServices from '~/components/widgets/CustomerServices.astro';
+import Advertise2 from '~/components/widgets/Advertise2.astro';
 // import Services from "~/pages/Services.astro";
 const { locale } = Astro.params;
-console.log(Astro.url.pathname)
+console.log(Astro.url.pathname);
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
@@ -16,10 +17,10 @@ const metadata = {
 
 export function getStaticPaths() {
   return [
-    { params: { locale: "en" } },
-    { params: { locale: "fr" } },
-    { params: { locale: "th" } },
-    { params: { locale: "la" } },
+    { params: { locale: 'en' } },
+    { params: { locale: 'fr' } },
+    { params: { locale: 'th' } },
+    { params: { locale: 'la' } },
   ];
 }
 const offersData = [
@@ -880,15 +881,11 @@ const offersData = [
   },
 ];
 ---
-<PageLayout  metadata={metadata} locale={locale} >
 
- 
- 
-    
-    <!-- <CareSection/>  -->
-    <CustomerServices locale={locale}/>
-    <!-- <CustomerReviews/> -->
-    <ProductList header="ความงาม" subHeader='' locale={locale} data={offersData} client:load >
-   
+<PageLayout metadata={metadata} locale={locale}>
+  <!-- <CareSection/>  -->
+  <Advertise2 />
+  <CustomerServices locale={locale} />
+  <!-- <CustomerReviews/> -->
+  <ProductList header="ความงาม" subHeader="" locale={locale} data={offersData} client:load />
 </PageLayout>
-

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-full h-full bg-white">
+  <!-- กรอบหน้ากระดาษ -->
+  <div class="max-w-screen-xl mx-auto bg-white shadow-lg min-h-screen rounded-lg">
+    <!-- โครงสร้างเนื้อหาหลัก -->
+    <div class="flex flex-col lg:flex-row min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-full lg:w-64 bg-white shadow-md p-6">
+        <ul class="space-y-3"></ul>
+        <li class="flex items-center space-x-2  hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/user (1).png" alt="Icon" class="w-4 h-4">
+          <span>Profile</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/heart (1).png" alt="Icon" class="w-4 h-4">
+          <span>Favorites</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/feedback.png" alt="Icon" class="w-4 h-4">
+          <span>My Review</span>
+        </li>
+        <li class="flex items-center space-x-2 text-teal-500 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/bell.png" alt="Icon" class="w-4 h-4">
+          <span>Notifications</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/id-card.png" alt="Icon" class="w-4 h-4">
+          <span>Membership Card</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/tax-credit.png" alt="Icon" class="w-4 h-4">
+          <span>Installment</span>
+        </li>
+      </ul>
+   </aside>
+
+    <body class="bg-gray-100 min-h-screen flex justify-center items-center">
+
+      <main class="flex-1 p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl font-medium text-gray-700 mb-6">Notifications</h1>
+        <div class="space-y-4">
+          <!-- Notification Item -->
+          <div class="bg-white p-4 rounded-lg border border-gray-200 flex items-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <img src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg" alt="Notification" class="w-20 h-20 rounded-md mr-4">
+            <div class="flex-1">
+              <h2 class="font-medium text-gray-700 text-lg">โปรโมชั่นจาก APS Clinic</h2>
+              <p class="text-gray-500 text-sm">โปรแกรมยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต) สามารถเห็นผลได้ตั้งแต่ครั้งแรกที่ทำ ...</p>
+              <p class="text-gray-400 text-xs mt-1">16-1-2025 12:00</p>
+            </div>
+            <button class="px-4 py-2 text-sm font-medium text-white bg-gray-400 hover:bg-teal-500 rounded-full mt-2 transition-colors duration-300">View Details</button>
+          </div>
+          <!-- Repeat for other items -->
+          <div class="bg-white p-4 rounded-lg border border-gray-200 flex items-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <img src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg" alt="Notification" class="w-20 h-20 rounded-md mr-4">
+            <div class="flex-1">
+              <h2 class="font-medium text-gray-700 text-lg">โปรโมชั่นจาก APS Clinic</h2>
+              <p class="text-gray-500 text-sm">โปรแกรมยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต) สามารถเห็นผลได้ตั้งแต่ครั้งแรกที่ทำ ...</p>
+              <p class="text-gray-400 text-xs mt-1">16-1-2025 12:00</p>
+            </div>
+            <button class="px-4 py-2 text-sm font-medium text-white bg-gray-400 hover:bg-teal-500 rounded-full mt-2 transition-colors duration-300">View Details</button>
+          </div>
+          <div class="bg-white p-4 rounded-lg border border-gray-200 flex items-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <img src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg" alt="Notification" class="w-20 h-20 rounded-md mr-4">
+            <div class="flex-1">
+              <h2 class="font-medium text-gray-700 text-lg">โปรโมชั่นจาก APS Clinic</h2>
+              <p class="text-gray-500 text-sm">โปรแกรมยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต) สามารถเห็นผลได้ตั้งแต่ครั้งแรกที่ทำ ...</p>
+              <p class="text-gray-400 text-xs mt-1">16-1-2025 12:00</p>
+            </div>
+            <button class="px-4 py-2 text-sm font-medium text-white bg-gray-400 hover:bg-teal-500 rounded-full mt-2 transition-colors duration-300">View Details</button>
+          </div>
+          <div class="bg-white p-4 rounded-lg border border-gray-200 flex items-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <img src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg" alt="Notification" class="w-20 h-20 rounded-md mr-4">
+            <div class="flex-1">
+              <h2 class="font-medium text-gray-700 text-lg">โปรโมชั่นจาก APS Clinic</h2>
+              <p class="text-gray-500 text-sm">โปรแกรมยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต) สามารถเห็นผลได้ตั้งแต่ครั้งแรกที่ทำ ...</p>
+              <p class="text-gray-400 text-xs mt-1">16-1-2025 12:00</p>
+            </div>
+            <button class="px-4 py-2 text-sm font-medium text-white bg-gray-400 hover:bg-teal-500 rounded-full mt-2 transition-colors duration-300">View Details</button>
+          </div>
+          <div class="bg-white p-4 rounded-lg border border-gray-200 flex items-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <img src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg" alt="Notification" class="w-20 h-20 rounded-md mr-4">
+            <div class="flex-1">
+              <h2 class="font-medium text-gray-700 text-lg">โปรโมชั่นจาก APS Clinic</h2>
+              <p class="text-gray-500 text-sm">โปรแกรมยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต) สามารถเห็นผลได้ตั้งแต่ครั้งแรกที่ทำ ...</p>
+              <p class="text-gray-400 text-xs mt-1">16-1-2025 12:00</p>
+            </div>
+            <button class="px-4 py-2 text-sm font-medium text-white bg-gray-400 hover:bg-teal-500 rounded-full mt-2 transition-colors duration-300">View Details</button>
+          </div>
+          <div class="bg-white p-4 rounded-lg border border-gray-200 flex items-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <img src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg" alt="Notification" class="w-20 h-20 rounded-md mr-4">
+            <div class="flex-1">
+              <h2 class="font-medium text-gray-700 text-lg">โปรโมชั่นจาก APS Clinic</h2>
+              <p class="text-gray-500 text-sm">โปรแกรมยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต) สามารถเห็นผลได้ตั้งแต่ครั้งแรกที่ทำ ...</p>
+              <p class="text-gray-400 text-xs mt-1">16-1-2025 12:00</p>
+            </div>
+            <button class="px-4 py-2 text-sm font-medium text-white bg-gray-400 hover:bg-teal-500 rounded-full mt-2 transition-colors duration-300">View Details</button>
+          </div>
+        </div>
+      </main>
+    </div>

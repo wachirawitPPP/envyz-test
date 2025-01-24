@@ -1,37 +1,70 @@
 ---
 const reviews = [
   {
-    "name": "คุณมะลิ พ.",
-    "image": "https://i.pinimg.com/736x/e0/d6/70/e0d670d16bbad299ec0fd467c031fe7e.jpg",
-    "review": "บริการดีมากค่ะ คุณหมอให้คำแนะนำอย่างละเอียด พนักงานก็เป็นกันเอง ราคาก็เหมาะสมมาก",
-    "rating": 5
+    name: 'คุณมะลิ พ.',
+    image: 'https://i.pinimg.com/736x/e0/d6/70/e0d670d16bbad299ec0fd467c031fe7e.jpg',
+    review: 'บริการดีมากค่ะ คุณหมอให้คำแนะนำอย่างละเอียด พนักงานก็เป็นกันเอง ราคาก็เหมาะสมมาก',
+    rating: 5,
   },
   {
-    "name": "คุณสมชาย ก.",
-    "image": "https://i.pinimg.com/736x/91/24/74/9124747c62bcc94451d40bb08708aaf6.jpg",
-    "review": "ซื้อคอร์สดูแลผิวผ่านเว็บไซต์นี้ ได้ผลลัพธ์ดีเกินคาดค่ะ ราคาก็ถูกกว่าในคลินิกทั่วไป",
-    "rating": 5
+    name: 'คุณกัญญา ม.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv92ajshN8OQiJlUKcazBEG7Wobhb7N1PJqQ&s',
+    review: 'บริการประทับใจมากค่ะ ตั้งแต่การให้คำปรึกษาไปจนถึงขั้นตอนการรักษา พนักงานใจดีทุกคนเลย',
+    rating: 4.5,
   },
   {
-    "name": "คุณวรรณา ว.",
-    "image": "https://i.pinimg.com/736x/55/5e/c5/555ec520b022cb78b02597bf08c420bb.jpg",
-    "review": "โปรโมชั่นเยอะมากและราคาถูกกว่าเคยเจอ ประทับใจตั้งแต่ใช้ครั้งแรกเลยค่ะ",
-    "rating": 5
-  }
+    name: 'คุณสมชาย ก.',
+    image: 'data:image/jpeg;base64,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',
+    review: 'ซื้อคอร์สดูแลผิวผ่านเว็บไซต์นี้ ได้ผลลัพธ์ดีเกินคาดค่ะ ราคาก็ถูกกว่าในคลินิกทั่วไป',
+    rating: 5,
+  },
+  {
+    name: 'คุณวรรณา ว.',
+    image: 'https://i.pinimg.com/736x/55/5e/c5/555ec520b022cb78b02597bf08c420bb.jpg',
+    review: 'โปรโมชั่นเยอะมากและราคาถูกกว่าเคยเจอ ประทับใจตั้งแต่ใช้ครั้งแรกเลยค่ะ',
+    rating: 5,
+  },
 ];
 ---
-<div class="review-section py-6 bg-white">
-  <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">เสียงตอบรับจากลูกค้าของเรา</h2>
-  <div class="reviews grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-4 px-20">
-    {reviews.map((review) => (
-      <div class="review-card bg-white shadow-md rounded-lg p-4 max-w-[180px] mx-auto flex flex-col items-start">
-        <img src={review.image} alt={`Customer ${review.name}`} class="w-14 h-14 rounded-full mb-2" />
-        <h3 class="text-xs font-semibold text-left text-gray-800">{review.name}</h3>
-        <p class="text-gray-600 text-xs text-left mt-1">{review.review}</p>
-        <div class="rating text-yellow-400 text-left mt-2 text-xs">
-          {'★'.repeat(review.rating)}
+<div class="review-section py-6 bg-white max-w-6xl mx-auto rounded-lg shadow-xl">
+  <h2 class="text-xl font-bold text-center text-gray-800 mb-6">เสียงตอบรับจากลูกค้าของเรา</h2>
+  <div class="reviews grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-8 lg:px-20">
+    {
+      reviews.map((review) => (
+        <div class="review-card bg-white border border-gray-200 shadow-lg rounded-lg p-6 mx-auto flex flex-col items-center transform transition duration-300 hover:scale-105 hover:rotate-3d hover:shadow-2xl hover:opacity-90 relative overflow-hidden">
+          
+          <div class="flex items-center mb-4 z-10">
+
+            <img src={review.image} alt={`Customer ${review.name}`} class="w-12 h-12 rounded-full mr-4 transition-all duration-300 hover:scale-110 hover:rotate-12 transform" />
+            <h3 class="text-base font-semibold text-gray-800">{review.name}</h3>
+          </div>
+          <p class="text-gray-600 text-sm text-left mb-4">{review.review}</p>
+          <div class="rating text-yellow-400 text-base flex justify-center">
+            {'★'.repeat(review.rating)}
+            {'☆'.repeat(5 - review.rating)}
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </div>
+<!-- Tailwind CSS Animation -->
+<style>
+
+  @keyframes rotate3d {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(15deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .hover\:rotate-3d:hover {
+    animation: rotate3d 0.5s ease-in-out;
+  }
+</style>
+

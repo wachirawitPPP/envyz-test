@@ -1,106 +1,79 @@
-<body class="flex flex-row items-center justify-center bg-transparent">
-  <div class="">
-    <div class="flex m-10 w-12/12 lg:w-12/12">
-      <div class="flex items-center -mr-5 z-10">
-        <button
-          id="prevBtn"
-          class="transform h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-10 bg-gray-300 bg-opacity-30 border-2 border-gray-300 text-gray-300 rounded-md p-2 hover:bg-gray-500 hover:bg-opacity-50 hover:text-white hover:border-gray-600 shadow-md"
-        >
-          &#10094;
-        </button>
-      </div>
-      <div class="flex justify-center flex-grow">
-        <div
-          id="sliderContainer"
-          class="flex overflow-hidden transition-transform duration-700 ease-in-out justify-center items-center relative"
-        >
-          <!-- Images -->
-          <div class="flex justify-center items-center">
-            <img
-              class=" mx-auto w-full max-h-[250px]"
-              src="https://www.gangnamclinicth.net/wp-content/uploads/2024/07/3.png"
-              alt="Image 1"
-            />
-          </div>
-          <div class="flex justify-center items-center">
-            <img
-              class="mx-auto w-full max-h-[250px]"
-              src="https://www.gangnamclinicth.net/wp-content/uploads/2024/07/31.png"
-              alt="Image 2"
-            />
-          </div>
-          <div class="flex justify-center items-center">
-            <img
-              class=" mx-auto w-full max-h-[250px]"
-              src="https://www.gangnamclinicth.net/wp-content/uploads/2022/10/gangnamclinic-jacksonwang.jpg"
-              alt="Image 3"
-            />
-          </div>
-        </div>
-        <div class="flex items-center -ml-5 z-10">
-          <button
-            id="nextBtn"
-            class="transform h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-10 bg-gray-300 bg-opacity-30 border-2 border-gray-300 text-gray-300 rounded-md p-2 hover:bg-gray-500 hover:bg-opacity-50 hover:text-white hover:border-gray-600 shadow-md"
-          >
-            &#10095;
-          </button>
-        </div>
-      </div>
+<div class="relative overflow-hidden w-full max-w-6xl mx-auto">
+  <!-- Slider Container -->
+  <div class="flex transition-transform duration-500 ease-in-out slider">
+    <div class="flex-shrink-0 w-full">
+      <img
+        src="https://static.hd.co.th/system/image_attachments/images/000/338/724/original/Hero_Carousel-_Brazilian_Laser_at_STC.png"
+        alt="Promotion 1"
+        class="w-full h-48 object-cover object-center"
+      />
+    </div>
+    <div class="flex-shrink-0 w-full">
+      <img
+        src="https://static.hd.co.th/system/image_attachments/images/000/320/600/original/Hero_Carousel_-CO2_Laser.png"
+        alt="Promotion 2"
+        class="w-full h-48 object-cover object-center"
+      />
+    </div>
+    <div class="flex-shrink-0 w-full">
+      <img
+        src="https://static.hd.co.th/system/image_attachments/images/000/305/837/original/Hero_Carousel-morpheus_9.png"
+        alt="Promotion 3"
+        class="w-full h-48 object-cover object-center"
+      />
+    </div>
+    <div class="flex-shrink-0 w-full">
+      <img
+        src="https://static.hd.co.th/system/image_attachments/images/000/363/487/original/Hero_Carousel_-_Office_Syndrome.png"
+        alt="Promotion 4"
+        class="w-full h-48 object-cover object-center"
+      />
     </div>
   </div>
 
-  <script>
-    const sliderContainer = document.getElementById('sliderContainer');
-    const slides = Array.from(sliderContainer.children); // Get all slides
-    let currentIndex = 0; // Start from the first slide
+  <!-- Navigation Buttons -->
+  <button
+  class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-10 border border-gray-200 border-opacity-20 text-black p-2 md:p-3 lg:p-4 rounded-full shadow-lg hover:bg-opacity-30 hover:border-opacity-50 hover:shadow-xl transition duration-300 prev-btn"
+>
+  ‹
+</button>
+<button
+  class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-10 border border-gray-200 border-opacity-20 text-black p-2 md:p-3 lg:p-4 rounded-full shadow-lg hover:bg-opacity-30 hover:border-opacity-50 hover:shadow-xl transition duration-300 next-btn"
+>
+  ›
+</button>
+</div>
 
-    // Function to update slider position
-    function updateSliderPosition() {
-      slides.forEach((slide, index) => {
-        slide.style.display = index === currentIndex ? 'flex' : 'none'; // Show current slide, hide others
-      });
-    }
+<script>
+  const slider = document.querySelector('.slider');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
 
-    // Move to the next slide
-    function goToNext() {
-      currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide after the last one
-      updateSliderPosition();
-    }
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slider > div'); // Adjusted for Tailwind layout
+const totalSlides = slides.length;
 
-    // Move to the previous slide
-    function goToPrev() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to the last slide before the first one
-      updateSliderPosition();
-    }
+// Move to the next slide
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlider();
+});
 
-    // Set interval to automatically move to the next slide every 3 seconds
-    setInterval(goToNext, 3000); // Change slide every 3 seconds
+// Move to the previous slide
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlider();
+});
 
-    // Event listeners for next and previous buttons
-    document.getElementById('nextBtn').addEventListener('click', goToNext);
-    document.getElementById('prevBtn').addEventListener('click', goToPrev);
+// Update slider position
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-    // Initialize the slider by showing the first slide
-    updateSliderPosition();
-  </script>
+// Auto-slide (Optional)
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlider();
+}, 5000); // 5000ms = 5 seconds
+</script>
 
-  <style>
-    /* Adjust height for smaller screens */
-    @media (max-width: 768px) {
-      #sliderContainer img {
-        height: 200px; /* Reduce height for smaller screens */
-      }
-    }
-
-    /* Ensure sliderContainer is displayed correctly */
-    #sliderContainer {
-      display: flex;
-      width: 100%;
-    }
-
-    /* Images within the slider should take full width */
-    #sliderContainer > div {
-      flex: 0 0 100%;
-    }
-  </style>
-</body>

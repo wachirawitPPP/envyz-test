@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-full h-full bg-white">
+  <!-- กรอบหน้ากระดาษ -->
+  <div class="max-w-screen-xl mx-auto bg-white shadow-lg min-h-screen rounded-lg">
+    <!-- โครงสร้างเนื้อหาหลัก -->
+    <div class="flex flex-col lg:flex-row min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-full lg:w-64 bg-white shadow-md p-6">
+        <ul class="space-y-3"></ul>
+        <li class="flex items-center space-x-2  text-teal-500 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/user (1).png" alt="Icon" class="w-4 h-4">
+          <span>Profile</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/heart (1).png" alt="Icon" class="w-4 h-4">
+          <span>Favorites</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/feedback.png" alt="Icon" class="w-4 h-4">
+          <span>My Review</span>
+        </li>
+        <li class="flex items-center space-x-2  hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/bell.png" alt="Icon" class="w-4 h-4">
+          <span>Notifications</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/id-card.png" alt="Icon" class="w-4 h-4">
+          <span>Membership Card</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/tax-credit.png" alt="Icon" class="w-4 h-4">
+          <span>Installment</span>
+        </li>
+
+    </aside>
+
+      <!-- Content -->
+      <main class="flex-1 p-4 lg:p-8 overflow-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Change Profile -->
+          <div class="bg-white text-gray-600 shadow rounded-lg p-6">
+            <h2 class="text-lg font-medium mb-4">Change Profile</h2>
+            <p class="text-sm text-gray-500 mb-4">Change your profile picture from here</p>
+            <div class="flex flex-col items-center">
+              <img src="/src/assets/images/user.jpg" alt="Profile" class="w-24 h-24 rounded-full mb-4">
+              <div class="flex space-x-4">
+                <button class="px-6 py-2 bg-teal-500 text-white font-medium rounded-full hover:bg-teal-600 transition">Upload</button>
+                <button class="px-6 py-2 border border-pink-500 text-pink-500 font-medium rounded-full hover:bg-pink-100 hover:text-pink-600 transition">Reset</button>
+              </div>
+              <p class="text-sm text-gray-400 mt-4">Allowed JPG, GIF or PNG. Max size of 800K</p>
+            </div>
+          </div>
+
+          <!-- Change Password -->
+          <div class="bg-white text-gray-600 shadow rounded-lg p-6">
+            <h2 class="text-lg font-medium mb-4">Change Password</h2>
+            <p class="text-sm text-gray-500 mb-4">To change your password please confirm here</p>
+            <form class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Current Password</label>
+                <input type="password" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">New Password</label>
+                <input type="password" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Confirm Password</label>
+                <input type="password" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500">
+              </div>
+            </form>
+          </div>
+
+          <!-- Personal Details -->
+          <div class="col-span-1 md:col-span-2 bg-white text-gray-600 shadow rounded-lg p-6">
+            <h2 class="text-lg font-medium mb-4">Personal Details</h2>
+            <p class="text-sm text-gray-500 mb-4">To change your personal details, edit and save from here</p>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-400">First Name</label>
+                <input type="text" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500" value="">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Last Name</label>
+                <input type="text" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500" value="">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Gender</label>
+                <select class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Date of Birth</label>
+                <div class="flex space-x-2">
+                  <select class="w-1/3 px-3 py-2 border rounded-md focus:outline-teal-500">
+                    <option>Date</option>
+                  </select>
+                  <select class="w-1/3 px-3 py-2 border rounded-md focus:outline-teal-500">
+                    <option>Month</option>
+                  </select>
+                  <select class="w-1/3 px-3 py-2 border rounded-md focus:outline-teal-500">
+                    <option>Year</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Email</label>
+                <input type="email" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500" value="">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Phone</label>
+                <input type="text" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500" value="">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Address</label>
+                <input type="text" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500" value="">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-400">Street Name, Building, House No.</label>
+                <input type="text" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-teal-500" value="">
+              </div>
+            </form>
+            <div class="flex justify-end space-x-4 mt-6">
+              <button class="px-7 py-2 bg-teal-500 text-white rounded-full hover:bg-teal-600 transition">Save</button>
+              <button class="px-5 py-2 border border-pink-500 text-pink-500 font-semibold rounded-full hover:bg-pink-100 hover:text-pink-600 transition">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

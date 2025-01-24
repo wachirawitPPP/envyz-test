@@ -1,0 +1,67 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Payment3 from '~/components/widgets/Payment3.astro';
+const { locale } = Astro.params;
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+
+
+---
+
+<PageLayout metadata={metadata} locale={locale}>
+  <Payment3/>
+  
+</PageLayout>
+<style>
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .custom-number-input input:focus {
+    outline: none !important;
+  }
+
+  .custom-number-input button:focus {
+    outline: none !important;
+  }
+</style>
+<script>
+  function decrement(e) {
+    const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    if (value > 1) {
+      // ตรวจสอบว่าค่ามากกว่า 1 ก่อนลด
+      value--;
+      target.value = value;
+    }
+  }
+
+  function increment(e) {
+    const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    value++;
+    target.value = value;
+  }
+
+  const decrementButtons = document.querySelectorAll(`button[data-action="decrement"]`);
+
+  const incrementButtons = document.querySelectorAll(`button[data-action="increment"]`);
+
+  decrementButtons.forEach((btn) => {
+    btn.addEventListener('click', decrement);
+  });
+
+  incrementButtons.forEach((btn) => {
+    btn.addEventListener('click', increment);
+  });
+  
+  document.querySelector('button.back-btn')?.addEventListener('click', () => {
+    window.location.href = '/en/cart';
+  });
+</script>

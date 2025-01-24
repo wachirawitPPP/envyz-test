@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="w-full h-full bg-white">
+  <div class="max-w-screen-xl mx-auto bg-white shadow-lg min-h-screen rounded-lg">
+    <div class="flex flex-col lg:flex-row min-h-screen">
+      <!-- Sidebar -->
+        <aside class="w-full lg:w-64 bg-white shadow-md p-6">
+        <ul class="space-y-3"></ul>
+        <li class="flex items-center space-x-2  hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/user (1).png" alt="Icon" class="w-4 h-4">
+          <span>Profile</span>
+        </li>
+        <li class="flex items-center space-x-2  hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/heart (1).png" alt="Icon" class="w-4 h-4">
+          <span>Favorites</span>
+        </li>
+        <li class="flex items-center space-x-2 text-teal-500 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/feedback.png" alt="Icon" class="w-4 h-4">
+          <span>My Review</span>
+        </li>
+        <li class="flex items-center space-x-2  hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/bell.png" alt="Icon" class="w-4 h-4">
+          <span>Notifications</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/id-card.png" alt="Icon" class="w-4 h-4">
+          <span>Membership Card</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/tax-credit.png" alt="Icon" class="w-4 h-4">
+          <span>Installment</span>
+        </li>
+
+    </aside>
+
+
+
+    <body class="bg-gray-100 min-h-screen flex justify-center items-center">
+      <div class="max-w-4xl w-full bg-white rounded-lg shadow-md p-6">
+        <!-- Title -->
+        <h1 class="text-2xl  text-gray-800 mb-6">My Review</h1>
+
+        <!-- Tabs -->
+        <div class="flex border-b border-gray-200 mb-4">
+          <button
+            id="to-rate-tab"
+            class="flex-1 text-center py-2  text-teal-500 border-b-2 border-teal-500"
+          >
+            To Rate
+          </button>
+          <button
+            id="my-review-tab"
+            class="flex-1 text-center py-2  text-gray-500 hover:text-teal-500"
+          >
+            My Review
+          </button>
+        </div>
+
+        <!-- To Rate Content -->
+        <div id="to-rate-content" class="space-y-4">
+          <div
+            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm flex items-center hover:shadow-lg transform hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Service Image -->
+            <img
+              src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg"
+              alt="Service"
+              class="w-24 h-24 rounded-lg object-cover"
+            />
+
+            <!-- Service Info -->
+            <div class="ml-4 flex-1">
+              <h2 class="text-lg font-medium text-gray-700">
+                APS Clinic
+                <span class="text-yellow-500">★</span>
+                <span class="text-gray-700">5.0</span>
+              </h2>
+              <p class="text-sm text-gray-400">
+                ยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต)
+              </p>
+              <p class="text-xs text-gray-400 mt-1">16-1-2025 12:00</p>
+            </div>
+
+            <!-- Review Button -->
+            <button
+              class="px-4 py-2 text-sm font-medium text-white bg-teal-500 rounded-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-300 transition duration-300 shadow-md transform hover:scale-105"
+            >
+              Review
+            </button>
+          </div>
+        </div>
+
+
+
+
+<!-- My Review Content -->
+<div id="my-review-content" class="space-y-4 hidden">
+  <!-- Example Card -->
+  <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
+    <!-- User Profile -->
+    <div class="flex items-center">
+      <img
+        src="/src/assets/images/user.jpg"
+        alt="User"
+        class="w-16 h-16 rounded-full"
+      />
+      <div class="ml-4">
+        <!-- Header -->
+        <h2 class="text-base font-medium text-gray-700">Fuji Kaze</h2>
+        <div class="text-yellow-500 text-lg mt-1">★★★★★</div>
+      </div>
+    </div>
+
+    <!-- Review Content -->
+    <div class="mt-4">
+      <p class="text-sm text-gray-500">
+        ประทับใจตั้งแต่พนักงานต้อนรับ การจัดการเป็นระเบียบ ไม่ยัดเยียดการขาย
+        การบริการโดยรวมดี คุณหมอน่ารัก
+      </p>
+      <p class="text-xs text-gray-400 mt-1">16-1-2025 12:00</p>
+    </div>
+
+    <!-- Service Section -->
+    <div class="flex items-center justify-between mt-4 bg-gray-50 p-3 rounded-md">
+      <!-- Service Info -->
+      <div class="flex items-center">
+        <img
+          src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg"
+          alt="Service"
+          class="w-20 h-20 rounded-md object-cover"
+        />
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-500">
+            บริการ: ยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต)
+          </p>
+          <p class="text-xs text-gray-400">APS Clinic</p>
+        </div>
+      </div>
+
+      <!-- Edit Button -->
+      <button
+        class="px-4 py-2 text-gray-500 border border-gray-400 rounded-full text-sm font-medium hover:bg-gray-100 focus:outline-none"
+        style="min-width: 80px;"
+      >
+        Edit
+      </button>
+    </div>
+
+</div>
+<div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
+  <!-- User Profile -->
+  <div class="flex items-center">
+    <img
+      src="/src/assets/images/user.jpg"
+      alt="User"
+      class="w-16 h-16 rounded-full"
+    />
+    <div class="ml-4">
+      <!-- Header -->
+      <h2 class="text-base font-medium text-gray-700">Fuji Kaze</h2>
+      <div class="text-yellow-500 text-lg mt-1">★★★★★</div>
+    </div>
+  </div>
+
+  <!-- Review Content -->
+  <div class="mt-4">
+    <p class="text-sm text-gray-500">
+      ประทับใจตั้งแต่พนักงานต้อนรับ การจัดการเป็นระเบียบ ไม่ยัดเยียดการขาย
+      การบริการโดยรวมดี คุณหมอน่ารัก
+    </p>
+    <p class="text-xs text-gray-400 mt-1">16-1-2025 12:00</p>
+  </div>
+
+  <!-- Service Section -->
+  <div class="flex items-center justify-between mt-4 bg-gray-50 p-3 rounded-md">
+    <!-- Service Info -->
+    <div class="flex items-center">
+      <img
+        src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg"
+        alt="Service"
+        class="w-20 h-20 rounded-md object-cover"
+      />
+      <div class="ml-4">
+        <p class="text-sm font-medium text-gray-500">
+          บริการ: ยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต)
+        </p>
+        <p class="text-xs text-gray-400">APS Clinic</p>
+      </div>
+    </div>
+
+    <!-- Edit Button -->
+    <button
+      class="px-4 py-2 text-gray-500 border border-gray-400 rounded-full text-sm font-medium hover:bg-gray-100 focus:outline-none"
+      style="min-width: 80px;"
+    >
+      Edit
+    </button>
+  </div>
+</div>
+
+
+
+
+
+      <script>
+        // Tab switching logic
+        const toRateTab = document.getElementById('to-rate-tab');
+        const myReviewTab = document.getElementById('my-review-tab');
+        const toRateContent = document.getElementById('to-rate-content');
+        const myReviewContent = document.getElementById('my-review-content');
+
+        const toggleTabs = (showTab, hideTab, showContent, hideContent) => {
+          showTab.classList.add('text-teal-500', 'border-teal-500');
+          showTab.classList.remove('text-gray-500');
+          hideTab.classList.remove('text-teal-500', 'border-teal-500');
+          hideTab.classList.add('text-gray-500');
+          showContent.classList.remove('hidden');
+          hideContent.classList.add('hidden');
+        };
+
+        toRateTab.addEventListener('click', () => {
+          toggleTabs(toRateTab, myReviewTab, toRateContent, myReviewContent);
+        });
+
+        myReviewTab.addEventListener('click', () => {
+          toggleTabs(myReviewTab, toRateTab, myReviewContent, toRateContent);
+        });
+      </script>
+    </body>
+    </html>

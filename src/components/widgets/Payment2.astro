@@ -1,120 +1,297 @@
-<body class="bg-gray-50 min-h-screen flex justify-center items-center">
-    <div class="max-w-3xl w-full mx-auto bg-white p-6 rounded-md shadow-md">
-      <!-- Progress Bar -->
-      <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
-        <!-- Step 1 -->
-        <div class="flex items-center space-x-1 mb-3 sm:mb-0">
-          <div class="w-8 h-8 flex items-center justify-center bg-[#00ad98] text-white text-sm font-bold rounded-full">1</div>
-          <span class="text-sm text-gray-700 font-medium">Cart</span>
-        </div>
-        <!-- Line between steps -->
-        <div class="flex-1 h-0.5 bg-[#00ad98] mx-2 hidden sm:block"></div>
-        <!-- Step 2 -->
-        <div class="flex items-center space-x-1 mb-3 sm:mb-0">
-          <div class="w-8 h-8 flex items-center justify-center bg-[#00ad98] text-white text-sm font-bold rounded-full">2</div>
-          <span class="text-sm text-gray-700 font-medium">Your Details & Payment</span>
-        </div>
-        <!-- Line between steps -->
-        <div class="flex-1 h-0.5 bg-gray-300 mx-2 hidden sm:block"></div>
-        <!-- Step 3 -->
-        <div class="flex items-center space-x-1">
-          <div class="w-8 h-8 flex items-center justify-center bg-gray-300 text-gray-700 text-sm font-bold rounded-full">3</div>
-          <span class="text-sm text-gray-700 font-medium">Order Completed</span>
-        </div>
+---
+import PaymentsModal from '~/components/widgets/PaymentsModal.astro';
+// import PaymentStep from "./Payment-step";
+// const { locale } = Astro.params;
+---
+
+<div class="max-w-full p-8 mt-6 mb-6 bg-white rounded-lg shadow sm:p-6 dark:bg-gray-700 mx-11">
+  <ol class="mx-auto flex w-full items-center justify-between mb-5">
+    <li class="flex items-center w-full">
+      <div class="relative flex flex-col items-center">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white"> 1 </span>
+        <div class="absolute top-12 w-32 text-center text-sm">Cart</div>
       </div>
-  
-      <!-- Your Details -->
-      <div class="mb-6">
-        <h2 class="text-lg font-semibold text-gray-700 mb-4 text-center">Your Details</h2>
-        <div class="space-y-4">
-          <!-- Name Field -->
-          <div>
-            <div class="flex flex-col sm:flex-row items-start sm:items-center mb-3">
-              <label class="text-sm text-gray-600 mb-1 sm:mb-0 sm:mr-3 w-full sm:w-32" for="name">Name</label>
-              <div class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-[#00ad98] w-full">
-                <img src="/src/assets/images/user.png" alt="User Icon" class="h-5 w-5 ml-3 text-gray-400" />
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Enter your name"
-                  class="w-full px-3 py-2 focus:outline-none text-sm"
-                />
-              </div>
+      <div class="flex-auto border-t-2 border-teal-600"></div>
+    </li>
+
+    <li class="flex items-center w-full">
+      <div class="relative flex flex-col items-center">
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 dark:bg-gray-400 text-white"
+        >
+          2
+        </span>
+        <div class="absolute top-12 w-40 text-center text-sm">Your Details & Payment</div>
+      </div>
+      <div class="flex-auto border-t-2 border-gray-300"></div>
+    </li>
+
+    <li class="flex items-center">
+      <div class="relative flex flex-col items-center">
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-600 dark:bg-gray-400 text-white"
+        >
+          3
+        </span>
+        <div class="absolute top-12 w-32 mr-4 text-center text-sm">Order Completed</div>
+      </div>
+    </li>
+  </ol>
+  <div class="relative overflow-x-auto">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div class="mt-10 mb-6">
+        <h2 class="px-6 text-lg text-gray-900">Your Details</h2>
+      </div>
+      <!-- Form -->
+      <form>
+        <div class="grid grid-cols-1 gap-4 px-6 border-t-2 mb-7">
+          <!-- Name -->
+          <div class="flex items-center mt-5 space-x-4">
+            <label class="w-20 text-sm font-medium text-gray-700" for="name-input"> Name </label>
+            <div
+              class="flex items-center w-full p-2 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-teal-500"
+            >
+              <span class="px-2 text-gray-500">
+                <svg
+                  class="w-5 h-5"
+                  width="15"
+                  height="20"
+                  viewBox="0 0 15 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 19V17C1.5 15.9391 1.92143 14.9217 2.67157 14.1716C3.42172 13.4214 4.43913 13 5.5 13H9.5C10.5609 13 11.5783 13.4214 12.3284 14.1716C13.0786 14.9217 13.5 15.9391 13.5 17V19M3.5 5C3.5 6.06087 3.92143 7.07828 4.67157 7.82843C5.42172 8.57857 6.43913 9 7.5 9C8.56087 9 9.57828 8.57857 10.3284 7.82843C11.0786 7.07828 11.5 6.06087 11.5 5C11.5 3.93913 11.0786 2.92172 10.3284 2.17157C9.57828 1.42143 8.56087 1 7.5 1C6.43913 1 5.42172 1.42143 4.67157 2.17157C3.92143 2.92172 3.5 3.93913 3.5 5Z"
+                    stroke="#111C2D"
+                    stroke-opacity="0.8"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <input
+                id="name-input"
+                type="text"
+                placeholder="Fuji kaze"
+                class="w-full text-gray-700 placeholder-gray-400 outline-none"
+              />
             </div>
           </div>
-          <!-- Email Field -->
-          <div>
-            <div class="flex flex-col sm:flex-row items-start sm:items-center mb-3">
-              <label class="block text-sm text-gray-600 mb-1 sm:mb-0 sm:mr-3 w-full sm:w-32" for="email">Email</label>
-              <div class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-[#00ad98] w-full">
-                <img src="/src/assets/images/envelope.png" alt="Email Icon" class="h-5 w-5 ml-3 text-gray-400" />
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                  class="w-full px-3 py-2 focus:outline-none text-sm"
-                />
-              </div>
+
+          <!-- Email -->
+          <div class="flex items-center space-x-4">
+            <label class="w-20 text-sm font-medium text-gray-700" for="name-input"> Email </label>
+            <div
+              class="flex items-center w-full p-2 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-teal-500"
+            >
+              <span class="px-2 text-gray-500">
+                <svg
+                  class="w-5 h-5"
+                  width="21"
+                  height="16"
+                  viewBox="0 0 21 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 3C1.5 2.46957 1.71071 1.96086 2.08579 1.58579C2.46086 1.21071 2.96957 1 3.5 1H17.5C18.0304 1 18.5391 1.21071 18.9142 1.58579C19.2893 1.96086 19.5 2.46957 19.5 3V13C19.5 13.5304 19.2893 14.0391 18.9142 14.4142C18.5391 14.7893 18.0304 15 17.5 15H3.5C2.96957 15 2.46086 14.7893 2.08579 14.4142C1.71071 14.0391 1.5 13.5304 1.5 13V3Z"
+                    stroke="#111C2D"
+                    stroke-opacity="0.8"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M1.5 3L10.5 9L19.5 3"
+                    stroke="#111C2D"
+                    stroke-opacity="0.8"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <input
+                id="name-input"
+                type="text"
+                placeholder="Fujiikaze@gmail.com"
+                class="w-full text-gray-700 placeholder-gray-400 outline-none"
+              />
             </div>
           </div>
-          <!-- Phone Field -->
-          <div>
-            <div class="flex flex-col sm:flex-row items-start sm:items-center mb-3">
-              <label class="block text-sm text-gray-600 mb-1 sm:mb-0 sm:mr-3 w-full sm:w-32" for="phone">Phone No</label>
-              <div class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-[#00ad98] w-full">
-                <img src="/src/assets/images/phone-call.png" alt="Phone Icon" class="h-5 w-5 ml-3 text-gray-400" />
-                <input
-                  id="phone"
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  class="w-full px-3 py-2 focus:outline-none text-sm"
-                />
-              </div>
+
+          <!-- Phone -->
+          <div class="flex items-center space-x-4">
+            <label class="w-20 text-sm font-medium text-gray-700" for="name-input"> Phone No </label>
+            <div
+              class="flex items-center w-full p-2 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-teal-500"
+            >
+              <span class="px-2 text-gray-500">
+                <svg
+                  class="w-5 h-5"
+                  width="20"
+                  height="19"
+                  viewBox="0 0 20 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.5 1H7.5L9.5 6L7 7.5C8.07096 9.67153 9.82847 11.429 12 12.5L13.5 10L18.5 12V16C18.5 16.5304 18.2893 17.0391 17.9142 17.4142C17.5391 17.7893 17.0304 18 16.5 18C12.5993 17.763 8.92015 16.1065 6.15683 13.3432C3.3935 10.5798 1.73705 6.90074 1.5 3C1.5 2.46957 1.71071 1.96086 2.08579 1.58579C2.46086 1.21071 2.96957 1 3.5 1Z"
+                    stroke="#111C2D"
+                    stroke-opacity="0.8"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <input
+                id="name-input"
+                type="text"
+                placeholder="412 2150 451"
+                class="w-full text-gray-700 placeholder-gray-400 outline-none"
+              />
             </div>
           </div>
         </div>
-      </div>
-  
-      <!-- Payment Methods -->
-      <div class="mb-6">
-        <h2 class="text-lg font-semibold text-gray-700 mb-4">Select a payment method</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <input id="installment" type="radio" name="payment" class="mr-2" />
-            <label for="installment" class="text-gray-700">Installment Plan</label>
-          </div>
-          <div>
-            <input id="promptpay" type="radio" name="payment" class="mr-2" />
-            <label for="promptpay" class="text-gray-700">PromptPay</label>
-          </div>
-          <div>
-            <input id="creditcard" type="radio" name="payment" class="mr-2" />
-            <label for="creditcard" class="text-gray-700">Credit Card / Debit Card</label>
-          </div>
-          <div>
-            <input id="internetbanking" type="radio" name="payment" class="mr-2" />
-            <label for="internetbanking" class="text-gray-700">Internet Banking</label>
-          </div>
-          <div>
-            <input id="paypal" type="radio" name="payment" class="mr-2" />
-            <label for="paypal" class="text-gray-700">PayPal</label>
-          </div>
-          <div>
-            <input id="truemoney" type="radio" name="payment" class="mr-2" />
-            <label for="truemoney" class="text-gray-700">True Money Wallet</label>
+        <!-- Payment Method -->
+        <div class="mt-4 mb-6">
+          <h2 class="px-6 text-lg text-gray-900">Select a payment method</h2>
+          <hr class="border-[1px] border-[gray-300] my-4" />
+          <div class="px-6 space-y-2">
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+              />
+              <span>Installment Plan</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+              />
+              <span>PromptPay</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+              />
+              <span>Creditcard / Debitcard</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+              />
+              <span>Internet Banking</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+              />
+              <span>PayPal</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                class="w-4 h-4 text-teal-500 border-2 border-[#E4EBF0] focus:ring-teal-400 focus:outline-none"
+              />
+              <span>True money wallet</span>
+            </label>
           </div>
         </div>
-      </div>
-  
-      <!-- Buttons -->
-      <div class="flex justify-between flex-wrap">
-        <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400">
+      </form>
+      <div class="flex justify-end mt-4 mb-5 space-x-4">
+        <button
+          class="px-4 py-2 font-sans text-sm font-normal text-white bg-gray-700 rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 btn-back"
+        >
           Previous
         </button>
-        <button class="bg-[#00ad98] text-white px-4 py-2 rounded-md hover:bg-[#00957a]">
+        <button
+          id="openModalBtn"
+          data-dialog-target="payment-modal"
+          class="px-4 py-2 font-sans text-sm font-normal text-white bg-teal-500 rounded-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 confirm-next"
+        >
           Next
         </button>
       </div>
+
+      <PaymentsModal />
     </div>
-  </body>
-  
+  </div>
+</div>
+<style>
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .custom-number-input input:focus {
+    outline: none !important;
+  }
+
+  .custom-number-input button:focus {
+    outline: none !important;
+  }
+</style>
+<script>
+  document.getElementById('openModalBtn').addEventListener('click', function () {
+    const modal = document.getElementById('static-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  });
+
+  document.querySelectorAll('[data-modal-hide="static-modal"]').forEach((btn) => {
+    btn.addEventListener('click', function () {
+      const modal = document.getElementById('static-modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    });
+  });
+
+  function decrement(e) {
+    const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    if (value > 1) {
+      // ตรวจสอบว่าค่ามากกว่า 1 ก่อนลด
+      value--;
+      target.value = value;
+    }
+  }
+
+  function increment(e) {
+    const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    value++;
+    target.value = value;
+  }
+
+  const decrementButtons = document.querySelectorAll(`button[data-action="decrement"]`);
+
+  const incrementButtons = document.querySelectorAll(`button[data-action="increment"]`);
+
+  decrementButtons.forEach((btn) => {
+    btn.addEventListener('click', decrement);
+  });
+
+  incrementButtons.forEach((btn) => {
+    btn.addEventListener('click', increment);
+  });
+
+  document.querySelector('button.btn-back')?.addEventListener('click', () => {
+    window.history.back();
+  });
+
+  document.querySelector('button.btn-completed')?.addEventListener('click', () => {
+    window.location.href = '/en/checkout/completed';
+  });
+</script>

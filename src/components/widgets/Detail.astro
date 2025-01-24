@@ -1,8 +1,7 @@
 ---
 import { getTranslations, t } from '../../i18n';
-import CustomerReviews from "./CustomerReviews.astro";
-import ItemsSuggestion from "./ItemSuggestion";
-
+import CustomerReviews from './CustomerReviews.astro';
+import ItemsSuggestion from './ItemSuggestion';
 
 const product = {
   title: 'HIFU Lifting Treatment',
@@ -27,10 +26,9 @@ const clinic = {
 };
 ---
 
-<div class="relative flex flex-col lg:flex-row gap-8 bg-white shadow-lg rounded-lg p-6">
+<div class="relative flex flex-col lg:flex-row gap-8 p-6 max-w-6xl mx-auto">
   <!-- Product Images -->
   <div class="flex-1 relative">
-    <!-- Heart Icon -->
     <div
       id="wishlistIcon"
       class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-lg cursor-pointer transition duration-300 hover:bg-gray-100"
@@ -42,39 +40,39 @@ const clinic = {
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-         class="h-8 w-8 text-gray-400 hover:text-red-500 cursor-pointer transition-transform transform hover:scale-125"
+        class="h-8 w-8 text-gray-400 hover:text-red-500 cursor-pointer transition-transform transform hover:scale-125"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-        ></path>
+        >
+        </path>
       </svg>
     </div>
     <style>
       @media (max-width: 768px) {
         #heartIcon {
-          height: 1rem; /* ลดขนาดสำหรับหน้าจอเล็ก */
+          height: 1rem;
           width: 1rem;
         }
       }
-    
+
       @media (min-width: 769px) {
         #heartIcon {
-          height: 1rem; /* ขนาดที่ใช้สำหรับหน้าจอใหญ่ */
+          height: 1rem;
           width: 1rem;
         }
       }
       .scroll-smooth {
-          scroll-behavior: smooth;
-        }
-        .scroll-smooth img:hover {
-          transform: scale(1.2); /* เพิ่มขนาดภาพขณะ hover */
-          transition: transform 0.3s ease;
-        }
+        scroll-behavior: smooth;
+      }
+      .scroll-smooth img:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s ease;
+      }
     </style>
-    <div class="grid lg:grid-cols-2 gap-8 bg-white shadow-lg rounded-lg p-6">
-      <!-- Product Image and Thumbnails -->
+    <div class="grid lg:grid-cols-2 gap-8 shadow-lg rounded-lg p-6 max-w-6xl mx-auto">
       <div>
         <img
           id="mainImage"
@@ -126,16 +124,14 @@ const clinic = {
             class="w-20 h-20 object-cover border rounded-lg hover:shadow-md cursor-pointer transition-transform transform hover:scale-110"
             onclick="changeImage(this.src)"
           />
-          
         </div>
       </div>
 
-      <!-- Product Details -->
       <div>
         <h1 class="text-2xl font-bold text-gray-800">{product.title}</h1>
         <div class="flex items-center gap-2 mt-2 text-[var(--color-turquoise)]">
           <span>⭐⭐⭐⭐⭐</span>
-          <span class="text-gray-600">4.8 (287 reviews)</span>
+          <span class="text-gray-600"> {t(locale, '4.8 (287 reviews)')} </span>
         </div>
 
         <div class="mt-4">
@@ -149,7 +145,6 @@ const clinic = {
         </div>
         <div class="mt-4 flex flex-col gap-4">
           <div class="flex flex-col gap-4">
-            <!-- ปุ่มแรก -->
             <button
               class="flex items-center gap-4 py-2 px-4 rounded-md border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"
             >
@@ -168,7 +163,6 @@ const clinic = {
                 </div>
               </div>
 
-              <!-- ปุ่มที่สอง -->
               <button
                 class="flex items-center gap-4 py-2 px-4 rounded-md border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-400"
               >
@@ -179,24 +173,21 @@ const clinic = {
                 />
                 <div>
                   <div class="flex flex-col items-start gap-1">
-                    <!-- ชื่อพร้อมสถานะ Verified -->
                     <div class="flex items-center gap-2">
                       <p class="text-gray-700 font-medium">Dr. Jinx</p>
                       <span class="text-green-500 text-sm material-icons">✔️ Verified</span>
                     </div>
-                    <!-- อีเมล -->
+
                     <p class="text-gray-500 text-sm">Dr.jinx2@aps.com</p>
                   </div>
                 </div>
               </button>
             </button>
             <div class="mt-6 flex items-center gap-4">
-              <!-- Qty Input -->
               <div>
                 <div class="flex items-center gap-4">
-                  <!-- Qty Label และ Input -->
                   <div class="flex items-center gap-2">
-                    <label for="qty" class="block text-sm font-medium text-gray-700">Qty:</label>
+                    <label for="qty" class="block text-sm font-medium text-gray-700"> {t(locale, 'Qty:')}</label>
                     <input
                       type="number"
                       id="qty"
@@ -207,17 +198,18 @@ const clinic = {
                   </div>
 
                   <div class="flex flex-nowrap justify-center gap-2 mt-3">
-                    <!-- ปุ่ม Add to Cart -->
                     <button
-                      class="py-1 px-3 rounded-full text-teal-500 bg-white border border-teal-500 hover:bg-teal-500 hover:text-white focus:ring-2 focus:ring-teal-400 focus:outline-none shadow-md text-sm transition-all"
+                      class="py-1 px-3 rounded-full text-teal-500 bg-white border border-teal-500 hover:bg-teal-500 hover:text-white focus:ring-2 focus:ring-teal-400 focus:outline-none shadow-md text-sm transition-all flex items-center space-x-2"
                     >
-                     {t(locale,"Add To Cart")}
+                      <i class="fa fa-cart-plus"></i>
+                      <span>{t(locale, 'Add To Cart')}</span>
                     </button>
-                    <!-- ปุ่ม Buy Now -->
+
                     <button
-                      class="py-1 px-3 rounded-full text-white bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none shadow-md text-sm transition-all"
+                      class="py-1 px-3 rounded-full text-white bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none shadow-md text-sm transition-all flex items-center space-x-2"
                     >
-                      Buy Now
+                      <i class="fa fa-credit-card"></i>
+                      <span>{t(locale, 'Buy Now')}</span>
                     </button>
                   </div>
                 </div>
@@ -225,81 +217,74 @@ const clinic = {
             </div>
           </div>
         </div>
-        
-            <div class="mt-6 space-y-4">
-              <!-- Description Button -->
-              <a
-                href="#description"
-                class="flex justify-between items-center py-4 border-b border-gray-200 text-gray-800 font-medium hover:text-[var(--color-turquoise)] transition"
-              >
-                <span>Description</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </a>
 
-              <!-- Reviews Button -->
-              <a
-                href="#reviews"
-                class="flex justify-between items-center py-4 border-b border-gray-200 text-gray-800 font-medium hover:text-[var(--color-turquoise)] transition"
-              >
-                <span>87 Reviews</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="mt-6"></div>
-          </div>
-        </div>
-        <!-- Clinic Information Section -->
-        <div class="mt-6 border rounded-lg p-4 flex items-center shadow-md">
-          <!-- Clinic Logo -->
-          <img
-            src="https://www.apsth.com/assets/images/logo/logo.svg"
-            alt="APSX Clinic Logo"
-            class="w-16 h-16 rounded-md object-contain"
-          />
-          <!-- Clinic Details -->
-          <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-800">APS Clinic</h3>
-            <div class="flex items-center gap-1 text-yellow-400">
-              <!-- Star Ratings -->
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <p class="text-sm text-gray-600">คลินิกเวชกรรม</p>
-            <p class="text-sm text-gray-600">📍 888/88 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น รหัสไปรษณีย์ 40000</p>
-          </div>
-        </div>
-        <div>
-          <CustomerReviews/>
-        </div>
-        <div class="mt-12">
-          <h2 class="text-xl font-bold text-gray-800 mb-4">You might also like</h2>
-          <ItemsSuggestion locale={locale} />
+        <div class="mt-6 space-y-4">
+          <a
+            href="#description"
+            class="flex justify-between items-center py-4 border-b border-gray-200 text-gray-800 font-medium hover:text-[var(--color-turquoise)] transition"
+          >
+            <span>{t(locale, 'Description')}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+
+          <a
+            href="#reviews"
+            class="flex justify-between items-center py-4 border-b border-gray-200 text-gray-800 font-medium hover:text-[var(--color-turquoise)] transition"
+          >
+            <span>{t(locale, '87 Reviews')}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
+    <div class="border rounded-lg p-4 flex items-center shadow-md mt-4 mb-4">
+      <img
+        src="https://www.apsth.com/assets/images/logo/logo.svg"
+        alt="APSX Clinic Logo"
+        class="w-16 h-16 rounded-md object-contain"
+      />
+
+      <div class="ml-4">
+        <h3 class="text-lg font-semibold text-gray-800">APS Clinic</h3>
+        <div class="flex items-center gap-1 text-yellow-400">
+          <span>⭐⭐⭐⭐⭐</span>
+        </div>
+        <p class="text-sm text-gray-600">คลินิกเวชกรรม</p>
+        <p class="text-sm text-gray-600">📍 888/88 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น รหัสไปรษณีย์ 40000</p>
+      </div>
+    </div>
+    <div>
+      <CustomerReviews />
+    </div>
+    <div class="mt-12">
+      <h2 class="text-xl font-bold text-gray-800 mb-4">{t(locale, 'You might also like')}</h2>
+      <ItemsSuggestion locale={locale} />
+    </div>
   </div>
 </div>
+
 <script>
   function changeImage(src) {
-    document.getElementById("mainImage").src = src;
+    document.getElementById('mainImage').src = src;
   }
 </script>

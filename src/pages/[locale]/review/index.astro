@@ -1,6 +1,6 @@
 ---
-import ReviewDetails from '~/components/widgets/ReviewDetails.astro';
-import PageLayout from '~/layouts/PageLayout.astro';
+import ReviewDetails from "~/components/widgets/ReviewDetails.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 
 // export interface Props {
 //   locale: string;
@@ -9,10 +9,10 @@ import PageLayout from '~/layouts/PageLayout.astro';
 // const { locale } = Astro.props;
 
 const metadata = {
-  title: 'Envyz Me  — Free template for creating websites with Astro + Tailwind CSS',
+  title:
+    "Envyz Me  — Free template for creating websites with Astro + Tailwind CSS",
   ignoreTitleTemplate: true,
 };
-
 
 // export function getStaticPaths() {
 //   return [
@@ -29,5 +29,5 @@ const { locale, productId } = Astro.params;
 ---
 
 <PageLayout locale={locale} metadata={metadata}>
-<ReviewDetails/>
+  <ReviewDetails />
 </PageLayout>

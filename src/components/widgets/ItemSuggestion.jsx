@@ -45,9 +45,9 @@ const OfferCard = ({ imgSrc, title, price, oldPrice, rating, id, handleForMoreCl
       className={`bg-white rounded-lg shadow-lg transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl`}
     >
       <div className="flex flex-row -space-x-8">
-        <img src={imgSrc} alt={title} className="   object-cover w-full" />
-        <div className="pt-2 text-white bg-teal-500 h-16 rounded-b-md ">
-          <div className="hover:-translate-y-2 transition-transform">
+        <img src={imgSrc} alt={title} className="object-cover w-full " />
+        <div className="h-16 pt-2 text-white bg-teal-500 rounded-b-md ">
+          <div className="transition-transform hover:-translate-y-2">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,30 +93,30 @@ const OfferCard = ({ imgSrc, title, price, oldPrice, rating, id, handleForMoreCl
       <div className="p-4">
         <h3 className="text-lg font-bold text-gray-900">{title}</h3>
         <div className="flex flex-row mt-2">
-          <div className="border-2 p-1 border-gray-200 rounded-md flex items-center">
+          <div className="flex items-center p-1 border-2 border-gray-200 rounded-md">
             <img
-              className=" w-10 h-10"
+              className="w-10 h-10 "
               src="https://www.apsth.com/assets/images/logo/logo.svg"
               alt="รูทส์ ฟิสิโอ คลินิกกายภาพบำบัด"
             />
           </div>
-          <div className="flex-1 ml-2  items-center">
-            <h3 className=" flex items-center">เอพีเอสทีเอช คลินิกกายภาพบำบัด</h3>
+          <div className="items-center flex-1 ml-2">
+            <h3 className="flex items-center ">เอพีเอสทีเอช คลินิกกายภาพบำบัด</h3>
           </div>
         </div>
 
-        <p className="text-sm text-gray-600 py-2">พบกับข้อเสนอสุดพิเศษประจำฤดูกาลนี้ ไม่ควรพลาด!</p>
-        <div className="flex justify-between items-center mt-2">
+        <p className="py-2 text-sm text-gray-600">พบกับข้อเสนอสุดพิเศษประจำฤดูกาลนี้ ไม่ควรพลาด!</p>
+        <div className="flex items-center justify-between mt-2">
           <div className="text-xl font-bold text-red-400">฿{price}</div>
           <span className="ml-2 text-sm font-medium text-gray-400 line-through">฿{oldPrice}</span>
         </div>
-        <div className="flex justify-between items-center mt-2">
+        <div className="flex items-center justify-between mt-2">
           <div className="flex items-center">
-            <div className="text-sm font-slim  text-red-400">ซื้อแล้ว</div>
-            <span className="ml-1 text-sm font-slim  text-gray-400">3,200</span>
-            <div className="text-sm  ml-1 font-slim  text-red-400">ครั้ง</div>
+            <div className="text-sm text-red-400 font-slim">ซื้อแล้ว</div>
+            <span className="ml-1 text-sm text-gray-400 font-slim">3,200</span>
+            <div className="ml-1 text-sm text-red-400 font-slim">ครั้ง</div>
           </div>
-          <div className="text-yellow-500 text-sm">{rating}</div>
+          <div className="text-sm text-yellow-500">{rating}</div>
         </div>
         <div className="flex gap-2 mt-2">
           {/* View Details Button */}
@@ -124,7 +124,7 @@ const OfferCard = ({ imgSrc, title, price, oldPrice, rating, id, handleForMoreCl
             onClick={() => {
               handleForMoreClick(id);
             }}
-            className="flex-1 py-2 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-lg text-sm font-medium shadow hover:opacity-90 transition"
+            className="flex-1 py-2 text-sm font-medium text-white transition rounded-lg shadow bg-gradient-to-r from-blue-500 to-teal-400 hover:opacity-90"
           >
             ดูรายละเอียด
           </button>
@@ -135,7 +135,7 @@ const OfferCard = ({ imgSrc, title, price, oldPrice, rating, id, handleForMoreCl
                 // Add to cart logic
                 console.log(`Added ${title} to cart`);
               }}
-              className="p-2 bg-gradient-to-r from-teal-500 to-blue-400 text-white rounded-lg text-sm font-medium shadow hover:bg-accent transition"
+              className="p-2 text-sm font-medium text-white transition rounded-lg shadow bg-gradient-to-r from-teal-500 to-blue-400 hover:bg-accent"
             >
               <div>
                 <svg
@@ -161,7 +161,7 @@ const OfferCard = ({ imgSrc, title, price, oldPrice, rating, id, handleForMoreCl
               </div>
             </button>
             {/* Tooltip */}
-            <div className="absolute z-20 bottom-full left-1/2 transform -translate-x-1/2 mb-2 min-w-max max-w-xs px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="absolute z-20 max-w-xs px-3 py-1 mb-2 text-xs text-white transition-opacity transform -translate-x-1/2 bg-gray-900 rounded-lg opacity-0 bottom-full left-1/2 min-w-max group-hover:opacity-100">
               Add to Cart
             </div>
           </div>
@@ -193,14 +193,14 @@ const ItemsSuggestion = ({ locale }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-full mx-8 mt-6 mb-6">
+    <div className="max-w-6xl p-4 mx-auto mt-4 mb-4 bg-white rounded-lg shadow-lg sm:p-5">
       <div className="lg:flex">
         {/* Main Content */}
         <div className="flex-1">
           {/* Search and Sort Bar */}
 
           {/* Offers Container */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {currentItems.map((offer) => (
               <OfferCard key={offer.id} handleForMoreClick={handleForMoreClick} {...offer} />
             ))}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="w-full h-full bg-white">
+  <div class="max-w-screen-xl mx-auto bg-white shadow-lg min-h-screen rounded-lg">
+    <div class="flex flex-col lg:flex-row min-h-screen">
+      <!-- Sidebar -->
+        <aside class="w-full lg:w-64 bg-white shadow-md p-6">
+        <ul class="space-y-3"></ul>
+        <li class="flex items-center space-x-2  hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/user (1).png" alt="Icon" class="w-4 h-4">
+          <span>Profile</span>
+        </li>
+        <li class="flex items-center space-x-2 text-teal-500 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/heart (1).png" alt="Icon" class="w-4 h-4">
+          <span>Favorites</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/feedback.png" alt="Icon" class="w-4 h-4">
+          <span>My Review</span>
+        </li>
+        <li class="flex items-center space-x-2  hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/bell.png" alt="Icon" class="w-4 h-4">
+          <span>Notifications</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/id-card.png" alt="Icon" class="w-4 h-4">
+          <span>Membership Card</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded-md">
+          <img src="/src/assets/images/tax-credit.png" alt="Icon" class="w-4 h-4">
+          <span>Installment</span>
+        </li>
+
+    </aside>
+
+      <!-- Content -->
+      <body class="bg-gray-100 min-h-screen flex justify-center items-center">
+        <div class="max-w-4xl w-full bg-white rounded-lg shadow-md p-6">
+  <h1 class="text-2xl font-medium text-gray-600 mb-6">Favorites</h1>
+
+  <!-- Tabs -->
+  <div class="flex border-b border-gray-200 mb-6">
+    <button
+      id="services-tab"
+      class="flex-1 text-center py-2 text-gray-500 border-b-2 border-teal-500 font-medium hover:bg-gray-100 transition duration-300"
+    >
+      Services
+    </button>
+    <button
+      id="organizations-tab"
+      class="flex-1 text-center py-2 text-gray-500 border-b-2 border-transparent font-medium hover:bg-gray-100 transition duration-300"
+    >
+      Organizations
+    </button>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="services-content" class="space-y-4 transition-opacity duration-500 opacity-100">
+    <!-- Services Content -->
+    <div
+      class="flex bg-white p-4 border border-gray-200 rounded-lg items-center relative shadow-sm hover:shadow-lg transition-shadow duration-300"
+    >
+      <img
+        src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg"
+        alt="Service"
+        class="w-24 h-24 rounded-lg"
+      />
+      <div class="flex-1 ml-4">
+        <h2 class="text-lg font-medium text-gray-700">
+          APS Clinic <span class="text-yellow-500">★<span class="text-gray-700 ">5.0</span>
+        </h2>
+        <p class="text-sm font-medium text-gray-400">
+          ยกกระชับด้วย HIFU - แก้ม หรือ เหนียง (ไม่จำกัดช็อต) 60 นาที
+        </p>
+        <p class="text-gray-400 text-xs mt-1">60 นาที</p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="text-teal-500 text-lg">
+            ฿1600 <span class="text-gray-400 line-through">฿3500</span>
+          </div>
+          <div class="flex space-x-2">
+            <button
+              class="px-3 py-2 text-sm font-medium text-gray-400 border border-gray-400 rounded-full hover:bg-gray-400 hover:text-white hover:scale-105 transition-transform duration-300"
+            >
+              Add to Cart
+            </button>
+            <button
+              class="px-3 py-2 text-sm font-medium text-white bg-teal-500 rounded-full hover:bg-teal-600 hover:scale-105 shadow-lg transition-transform duration-300"
+            >
+              Buy now
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="absolute top-2 right-2 text-red-500 hover:text-red-600 transform hover:scale-110 transition-transform duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          stroke="none"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- การ์ดใหม่ -->
+    <div
+      class="flex bg-white p-4 border border-gray-200 rounded-lg items-center relative shadow-sm hover:shadow-lg transition-shadow duration-300"
+    >
+      <img
+        src="https://theoriginclinic.com/wp-content/uploads/2022/05/hifu.jpg"
+        alt="Service"
+        class="w-24 h-24 rounded-lg"
+      />
+      <div class="flex-1 ml-4">
+        <h2 class="text-lg font-medium text-gray-700">
+          New Service <span class="text-yellow-500">★ <span class="text-gray-700 "> 4.8</span>
+        </h2>
+        <p class="text-sm font-medium text-gray-400">
+          บริการใหม่ เช่น นวดหน้า หรืออื่น ๆ
+        </p>
+        <p class="text-gray-400 text-xs mt-1">45 นาที</p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="text-teal-500 text-lg">
+            ฿1200 <span class="text-gray-400 line-through">฿2500</span>
+          </div>
+          <div class="flex space-x-2">
+            <button
+              class="px-3 py-2 text-sm font-medium text-gray-400 border border-gray-400 rounded-full hover:bg-gray-400 hover:text-white hover:scale-105 transition-transform duration-300"
+            >
+              Add to Cart
+            </button>
+            <button
+              class="px-3 py-2 text-sm font-medium text-white bg-teal-500 rounded-full hover:bg-teal-600 hover:scale-105 shadow-lg transition-transform duration-300"
+            >
+              Buy now
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="absolute top-2 right-2 text-red-500 hover:text-red-600 transform hover:scale-110 transition-transform duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          stroke="none"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+
+
+  <div id="organizations-content" class="space-y-4 hidden">
+    <!-- การ์ดเดิม -->
+    <div class="flex bg-white p-4 border border-gray-200 rounded-lg items-center relative shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <img src="https://www.apsth.com/assets/images/logo/logo.svg" alt="Service" class="w-24 h-24 rounded-lg">
+      <div class="flex-1 ml-4">
+        <h2 class="text-lg font-medium text-gray-700">
+          APS Clinic <span class="text-yellow-500">★ <span class="text-gray-700 "> 5.0</span>
+        </h2>
+        <p class="text-sm font-medium text-gray-400">
+          888/88 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น รหัสไปรษณีย์ 40000
+        </p>
+        <p class="text-gray-400 text-sm mt-1">คลินิกเวชกรรม</p>
+        <p class="text-gray-400 text-sm mt-1">เวลาบริการ 08:30 น. – 17:30 น.</p>
+      </div>
+      <button class="absolute top-4 right-4 text-red-500 hover:text-red-600 transform hover:scale-110 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+      </button>
+      <div class="absolute bottom-4 right-4 flex space-x-2">
+        <button class="px-3 py-2 text-sm font-medium text-gray-400 border border-gray-400 rounded-full hover:bg-gray-400 hover:text-white hover:scale-105 transition-transform duration-300">
+          Add to Cart
+        </button>
+        <button class="px-3 py-2 text-sm font-medium text-white bg-teal-500 rounded-full hover:bg-teal-600 hover:scale-105 shadow-lg transition-transform duration-300">
+          Buy now
+        </button>
+      </div>
+    </div>
+
+    <div class="flex bg-white p-4 border border-gray-200 rounded-lg items-center relative shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <img src="https://apsth-x.s3.ap-southeast-1.amazonaws.com/shop/Se05a532d-7f8a-4a89-866e-dd49963011d3.jpg" alt="Service" class="w-24 h-24 rounded-lg">
+      <div class="flex-1 ml-4">
+        <h2 class="text-lg font-medium text-gray-700">
+          New Clinic <span class="text-yellow-500">★ <span class="text-gray-700 "> 4.8</span>
+        </h2>
+        <p class="text-sm font-medium text-gray-400">
+          1234/56 หมู่ 7 ตำบลเมือง อำเภอบางเขน จังหวัดกรุงเทพฯ รหัสไปรษณีย์ 10210
+        </p>
+        <p class="text-gray-400 text-sm mt-1">คลินิกความงาม</p>
+        <p class="text-gray-400 text-sm mt-1">เวลาบริการ 09:00 น. – 18:00 น.</p>
+      </div>
+      <button class="absolute top-4 right-4 text-red-500 hover:text-red-600 transform hover:scale-110 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+      </button>
+      <div class="absolute bottom-4 right-4 flex space-x-2">
+        <button class="px-3 py-2 text-sm font-medium text-gray-400 border border-gray-400 rounded-full hover:bg-gray-400 hover:text-white hover:scale-105 transition-transform duration-300">
+          Add to Cart
+        </button>
+        <button class="px-3 py-2 text-sm font-medium text-white bg-teal-500 rounded-full hover:bg-teal-600 hover:scale-105 shadow-lg transition-transform duration-300">
+          Buy now
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Tab switching logic with animation
+  const servicesTab = document.getElementById('services-tab');
+  const organizationsTab = document.getElementById('organizations-tab');
+  const servicesContent = document.getElementById('services-content');
+  const organizationsContent = document.getElementById('organizations-content');
+
+  const toggleTabs = (show, hide) => {
+    show.classList.remove('hidden');
+    show.classList.add('opacity-100');
+    hide.classList.add('hidden');
+    hide.classList.remove('opacity-100');
+  };
+
+  servicesTab.addEventListener('click', () => {
+    toggleTabs(servicesContent, organizationsContent);
+    servicesTab.classList.add('text-teal-500', 'border-teal-500');
+    organizationsTab.classList.remove('text-teal-500', 'border-teal-500');
+    organizationsTab.classList.add('text-gray-500');
+  });
+
+  organizationsTab.addEventListener('click', () => {
+    toggleTabs(organizationsContent, servicesContent);
+    organizationsTab.classList.add('text-teal-500', 'border-teal-500');
+    servicesTab.classList.remove('text-teal-500', 'border-teal-500');
+    servicesTab.classList.add('text-gray-500');
+  });
+</script>
+

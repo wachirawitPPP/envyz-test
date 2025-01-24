@@ -27,10 +27,10 @@ export const headerData = {
       text: 'Article',
       href: 'article',
     },
-    {
-      text: 'Cart',
-      href: 'cart',
-    },
+    // {
+    //   text: 'Cart',
+    //   href: 'cart',
+    // },
     {
       text: 'Landing',
       links: [

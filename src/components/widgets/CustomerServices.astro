@@ -1,55 +1,56 @@
 ---
-import { getTranslations, t } from '../../i18n';
+import { getTranslations, t } from "../../i18n";
 const { locale } = Astro.props;
 const customerservices = [
-
-    {
-      title: 'Surgery',
-      image:
-        '/icon-menu/ICON-01.svg',
-      alt: 'ผ่าตัด'
-    },
-    {
-      title: 'Health',
-      image:
-        '/icon-menu/ICON-02.svg',
-      alt: 'สุขภาพ'
-    },
-    {
-      title: 'Dentistry',
-      image:
-        '/icon-menu/ICON-03.svg',
-      alt: 'ทำฟัน'
-    },
-    {
-      title: 'Surgery',
-      image:
-        '/icon-menu/ICON-04.svg',
-      alt: 'ศัลยกรรม'
-    },
-    {
-      title: 'Beautify',
-      image:
-        '/icon-menu/ICON-05.svg',
-      alt: 'เสริมสวย'
-    }
-  ]
-
+  {
+    title: "Surgery",
+    image: "/icon-menu/ICON-01.svg",
+    alt: "ผ่าตัด",
+  },
+  {
+    title: "Health",
+    image: "/icon-menu/ICON-02.svg",
+    alt: "สุขภาพ",
+  },
+  {
+    title: "Dentistry",
+    image: "/icon-menu/ICON-03.svg",
+    alt: "ทำฟัน",
+  },
+  {
+    title: "Surgery",
+    image: "/icon-menu/ICON-04.svg",
+    alt: "ศัลยกรรม",
+  },
+  {
+    title: "Beautify",
+    image: "/icon-menu/ICON-05.svg",
+    alt: "เสริมสวย",
+  },
+];
 ---
 
-
-<section class="services py-8 px-4">
-  <h2 class="text-2xl font-bold text-center mb-6">{t(locale,"Our Services")}</h2>
-  <div class="flex flex-wrap justify-center w-full gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-    {customerservices.map((customer) => (
-      <div class="card flex flex-col items-center justify-center w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 bg-white bg-opacity-60 shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
-        <img
-          src={customer.image}
-          alt={customer.alt}
-          class="h-16 w-16 sm:h-18 sm:w-18 md:h-20 md:w-20"
-        />
-        <h3 class="text-sm sm:text-base md:text-lg text-primary mt-4 font-semibold">{t(locale,customer.title)}</h3>
-      </div>
-    ))}
+<section class="relative overflow-hidden w-full max-w-6xl mx-auto p-6 services">
+  <h2 class="mb-6 text-2xl font-bold text-center">
+    {t(locale, "Our Services")}
+  </h2>
+  <div
+    class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8"
+  >
+    {
+      customerservices.map((customer) => (
+        <div class="flex flex-col items-center justify-center bg-white rounded-lg shadow-md transition-transform transform bg-opacity-60 hover:scale-105 hover:shadow-lg p-4 w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44">
+          <img
+            src={customer.image}
+            alt={customer.alt}
+            class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+          />
+          <h3 class="mt-4 text-sm font-semibold sm:text-base lg:text-lg text-primary text-center">
+            {t(locale, customer.title)}
+          </h3>
+        </div>
+      ))
+    }
   </div>
 </section>
+
